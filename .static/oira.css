@@ -1,0 +1,74 @@
+@import url('default.css');
+body {
+    background-color: #003399;
+}
+div.body {
+    border-left:1px solid #CCCCCC;
+}
+ 
+div.document {
+    background-color: #f2f2f2;
+}
+
+div.sphinxsidebar h3,h4,h5 {
+    color: #666 !important;
+}
+div.sphinxsidebar li a {
+color:#666666;
+}
+
+
+div.related {
+    color: #fff;
+    background-color: #003399;
+}
+ 
+div.related a {
+    color: #fff;
+}
+
+div.body h3 {
+    font-size: 120%;
+}
+
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    background-color: transparent;
+}
+
+div.sphinxsidebar h3 a {
+color:#666666;
+}
+div.sphinxsidebar p {
+color:#666;
+}
+div.sphinxsidebar a {
+color:#003399;
+}
+div.sphinxsidebar input {
+border:1px solid #003399;
+}
+div.sphinxsidebar ul {
+color:#003399;
+}
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points {
+list-style-type:disc;
+}
+a {
+color:#003399;
+}
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+background:#FEFEFE none repeat scroll 0 0;
+border-bottom:1px solid #CCCCCC;
+border-top:1px solid #CCCCCC;
+color:#003399;
+}
+pre {
+background-color:#F2F2F2;
+border-color:#003399 -moz-use-text-color;
+}
+.align-left {
+  float:left;
+}
