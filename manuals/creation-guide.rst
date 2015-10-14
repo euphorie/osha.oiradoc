@@ -14,7 +14,7 @@ The OiRA tool promotes a stepwise approach to risk assessment and is made up of 
 
   * **Identification** > the end-user goes through the hazards/problems and answers YES or NO
 
-  * **Evaluation** > the end-user evaluates the risks for each problem/hazard spotted
+  * **Evaluation** (integrated into Identification) > the end-user evaluates the risks for each problem/hazard spotted
 
   * **Action plan** > the end-user fills in an action plan with measures to tackle all stated risks
 
@@ -197,7 +197,7 @@ You can choose from 3 types of risks:
 
         .. note::
 
-            To identify and evaluate the above two types of risk it is often necessary to examine the workplace 
+            To identify and evaluate the above two types of risk it is often necessary to examine the workplace
             (to walk around the workplace and look at what could cause harm; consult workers, etc.).
 
     #. **Policy**: refers to agreements, procedures, and management decisions regarding OSH issues.
@@ -214,7 +214,7 @@ You can choose from 3 types of risks:
 -------------------------------------
 
 Problems/hazards (i.e. risks) that have been identified by the end-user,
-generally need to be assigned a priority. 
+generally need to be assigned a priority.
 
 #. Risks of type **Policy Risk** are strictly speaking not risks and therefore don't receive a
    priority value.
@@ -229,17 +229,23 @@ generally need to be assigned a priority.
 
     For each risk (of type *Risk*) you create in the OiRA tool, you may choose from 3 evaluation methods:
 
-    * **Estimated**: 
-        
-        During the **Evaluation** phase of the OiRA tool assessment, the 
+    * **Skip evaluation**:
+
+        In this case, the content creator must set the priority beforehand (i.e.
+        while creating the OiRA tool's contents) and the end-user will not
+        evaluate the risk at all.
+
+    * **Estimated**:
+
+        During the **Evaluation** phase of the OiRA tool assessment, the
         end-user will determine the priority of a risk by selecting a value of **high, medium** or **low**.
         The content creator is able (but not forced), to provide a default priority value, shown to
         the user, which the end-user may choose to keep unchanged.
 
     * **Calculated**:
 
-        In this case, the risk's priority will be automatically calculated from the 
-        values of 2 or 3 different criteria, depending on the *evaluation algorithm* 
+        In this case, the risk's priority will be automatically calculated from the
+        values of 2 or 3 different criteria, depending on the *evaluation algorithm*
         employed by the OiRA Tool.
 
         If the evaluation algorithm is the *Kinney method*, then the 3 criteria
@@ -256,14 +262,18 @@ generally need to be assigned a priority.
         **Evaluation** phase, although the content creator is again able to provide
         default values.
 
-    * **Skip evaluation**: 
 
-        In this case, the content creator must set the priority beforehand (i.e.
-        while creating the OiRA tool's contents) and the end-user will not
-        evaluate the risk at all.
+    **Custom explanations for "Calculated" evaluation**
 
+    When the end-user is evaluating a risk that uses the "Calculated" evaluation method, an info-bubble is shown next to the three criteria *Probability*, *Frequency* and *Severity*. This info bubble explains in a short sentence the meaning of the criteria, using pre-defined sentences.
 
-3.5 Propose measures 
+    In case the tool creator wants to provide a more specific explanation to the users of their OiRA tool, they can to this on the edit-form of a tool (see :ref:`edit-oira-tool`). At the bottom of the form, there is a checkbox that reads "The criteria applied to evaluate risks are specific of this tool? (If not, the common criteria descriptions will apply)." If it is ticked, a field appears for each of the criteria, where the custom texts can be entered. Next to each of those fields, an info bubble shows the default explanation that would be used if no custom explanation is given:
+
+.. image:: images/creation/custom_evaluation_explanation.png
+  :align: center
+  :height: 233 px
+
+3.5 Propose measures
 --------------------
 
 The sector is generally well-informed of the risks that are most likely to lead to occupational accidents and diseases.

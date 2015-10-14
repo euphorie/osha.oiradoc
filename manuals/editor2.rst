@@ -20,7 +20,7 @@ Browsers
 Preferred web browsers to access OiRA (both admin and client) are: Mozilla
 Firefox version 3.6, or any later version, or Google Chrome (both are
 available to download for free). Alternatively Microsoft Internet Explorer
-version 9, or any later version.
+version 10, or any later version.
 
 --------------------------
 Types of Login Accounts
@@ -214,6 +214,8 @@ Updating an existing OiRA tool version usually requires you to only do minimal c
 
 Now you have a second OiRA tool version available and on which you can make changes that won't affect the original version. Once you are done, you can publish it and it will replace the existing OiRA tool.
 
+.. _edit-oira-tool:
+
 ============================
 Editing an OiRA tool version
 ============================
@@ -269,8 +271,8 @@ You will then see a form similar to the one shown below.
     Write the NACE-code of your sector.
 
 * **Include a logo which links to an external website**:
-    Your sector might already have chosen a logo that will appear in the top
-    left corner of the OiRA risk assessment website.
+    Your sector might already have chosen a logo that will appear in the bottom
+    left corner of the OiRA risk assessment application.
 
     This logo can be clicked and links to the homepage of the OiRA risk
     assessment site (https://client.oiraproject.eu).
@@ -281,6 +283,7 @@ You will then see a form similar to the one shown below.
 
     .. figure:: images/editor/editor_client_example_logos.png
       :align: center
+      :height: 512 px
       :alt: An example of the end-user facing OiRA site, showing the two different logos.
 
       *An example of end-user facing OiRA risk assessment site (OiRA client), showing the two different logos*
@@ -308,18 +311,19 @@ Formatted Text
 In certain forms in the OiRA tools generator, there exist special, larger
 fields in which you can add both plain and formatted text (*also known as rich text*).
 
-You will be able to identify this option from the grey bar at the top-left of the page
-(the 'formatting bar'). The formatting bar will only be visible when
-your cursor is in a field where formatting is possible.
+You will be able to identify this option from the editor-bar directly above such fields
+(the 'formatting bar'). In case there are multiple fields for rich text on a single page,
+each of them will have its own formatting bar.
 
     .. figure:: images/editor/editor_formatting_bar.png
       :align: center
-      :alt: The formatting bar, which appears when your cursor is in a field where formatting text is possible
+      :height: 410 px
+      :alt: Example of a rich text field with the formatting bar above it
 
-      *The formatting bar, which appears when your cursor is in a field where formatting text is possible*
+      *Example of a rich text field with the formatting bar above it*
 
 It is important that you only copy a not formatted text into the field.
-Pasting formatted text from another program, e.g. Word, Excel, etc. will later cuase displaying
+Pasting formatted text from another program, e.g. Word, Excel, etc. may later cause displaying
 problems in the OiRA website for end-users (client).
 You will not see this code when you paste the text onto the OiRA tools generator, but it does exist
 'underneath' the text. Hyperlinks also have a fixed format in Word (colour
@@ -358,7 +362,7 @@ The formatting bar offers the following options:
 * **Hyperlink (to a website):**
     First type the text on which you would like to apply the hyperlink, for example: 'Also see this website'.
     Subsequently you select the text (by dragging the mouse). You then click on the button with the chain icon in the formatting bar.
-    A new screen will then open:
+    A new window will then open, while the rest of the screen appears greyed out:
 
     .. figure:: images/editor/editor_8_place_a_link.png
       :align: center
@@ -368,7 +372,7 @@ The formatting bar offers the following options:
 
     * **URL**:
         The address of the web page you want to link to, this must start with: 'http://' or 'https://'.
-    * **Title**:
+    * **Text**:
         The title will appear in the tooltip when a person hovers his/her mouse
         cursor above the hyperlink.
     * **Open link in new window**:
@@ -376,9 +380,11 @@ The formatting bar offers the following options:
         in a new browser window (or tab), your user will not lose the current
         open page (i.e. the OiRA risk assessment site).
 
-    **To modify a link**, double click on the link.
+    **To modify a link** or **to delete a link** simple click on the link. A context menu opens with the options to *Edit* (opening the window you already now from adding the link) or to *Unlink* (removing the hyperlink but keeping the text):
 
-    **To delete a link**, simply remove the linked word via the *Backspace* key or the *Delete* key.
+    .. figure:: images/editor/editor_8a_edit_a_link.png
+      :align: center
+      :alt: Adding a hyperlink to formatted text
 
     .. note::
 
@@ -737,7 +743,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
     :align: center
     :alt: The 'Add Risk' form
 
-    *This 'Add Risk' form*
+    *The 'Add Risk' form*
 
 **Affirmative Statement**:
     Write a short affirmative statement about a possible risk
@@ -904,6 +910,13 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
     This function will only allow you to upload images with a 'gif', 'jpeg' or 'png'
     extension. Any other files will first have to be placed onto a website and
     can be linked to from the text.
+
+**Additional Content**
+
+    If you have additional content (files such as PDF, Word or Excel documents) that can help
+    explain a risk situation, you can add up to four such documents here. In the OiRA application,
+    the user will see a link to each of the uploaded files that allows them to download them. If you provide a caption for a file, this will be displayed to the user, otherwise the file-name
+    will be shown.
 
 Once you are done, click on *Save* (at the bottom of the page).
 
@@ -1227,7 +1240,7 @@ Calculated, as before.
 Updating of saved sessions
 --------------------------
 
-When changes are made to a tool, existing sessions will not be updated 
+When changes are made to a tool, existing sessions will not be updated
 immediately but only when the user goes back to them in the client. (This also
 affects the available data for the statistical reports.) At this time the data
 will be updated and any newly created, changed or deleted modules or risks
