@@ -916,7 +916,11 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
     If you have additional content (files such as PDF, Word or Excel documents) that can help
     explain a risk situation, you can add up to four such documents here. In the OiRA application,
     the user will see a link to each of the uploaded files that allows them to download them. If you provide a caption for a file, this will be displayed to the user, otherwise the file-name
-    will be shown.
+    will be shown:
+
+    .. figure:: images/editor/editor_additional_content.png
+       :align: center
+
 
 Once you are done, click on *Save* (at the bottom of the page).
 
