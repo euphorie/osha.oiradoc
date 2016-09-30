@@ -1,0 +1,7 @@
+pip-selfcheck.json
+.installed.cfg
+.build/
+bin/
+lib/
+include/
+local/
