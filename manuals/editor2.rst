@@ -793,104 +793,109 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
 **Evaluation**:
 
+
+    **Risk type**:
+    There are 3 types of risk which you can choose from.
+
+    Risks that have been identified by the end-user,
+    need to be assigned a priority, and the risk's type determines
+    what this priority will be or how it will be calculated.
+
+    #. **Priority risk**:
+        Refers to a risk considered by the sector/authorities among the high risks in the sector.
+
+        Risks of this type automatically receive a priority of *high*, so
+        end-users will not be asked to evaluate them.
+
+        If you choose this option, all subsequent fields under the
+        *Evaluation* section in the form will disappear (since they won't
+        be applicable anymore).
+
+    #. **Risk**:
+        Refers to the existing risks at the workplace or linked to the work
+        carried out. To identify and evaluate such risks it is often necessary to
+        examine the workplace (to walk around the workplace and look at what could
+        cause harm; consult workers, etc.).
+
+        For this "risk" type, the developer has to choose an evaluation method.
+        The developer can choose from three options of evaluation methods:
+
+            * **Estimated**:
+
+                .. figure:: images/editor/editor_14_risk_evaluation_estimated.png
+                    :align: center
+                    :alt: When choosing 'Estimated' as the evaluation method, you also need to set a default priority.
+
+                During the **Evaluation** phase of the OiRA tool assessment, the
+                end-user will determine the priority of a risk by selecting a value of **high, medium** or **low**.
+                The developer can also choose a **default priority** that will appear to the end users who can nevertheless overrule it.
+
+            * **Calculated**:
+                In this case, the risk's priority will be automatically calculated from the
+                values of 2 or 3 different criteria, depending on the *evaluation algorithm*
+                employed by the OiRA Tool, selected when you create the tool.
+                For each criterion the developer can choose a default or
+                leave the "no default" option(s). Providing a default
+                gives an orientation to the end user how to evaluate the
+                risk. However the end-user is always free to overrule the
+                default recommendation.
+
+                If the evaluation algorithm is the *Kinney method*, then the 3 criteria
+                are:
+
+                #. **Probability**
+                    How high is the probability that this risk will occur?
+                #. **Frequency**
+                    How often is one exposed to this risk?
+                #. **Severity**
+                    How severe is the danger posed by this risk?
+
+                If the algorithm is the *simplified, 2 criteria* version, only *severity* and *frequency*
+                (sometimes also referred to as *exposure*) are used as criteria.
+
+                The values for these criteria are supplied by the end-user during the
+                **Evaluation** phase, but you, as the developer, are
+                able to provide default values.
+
+                .. figure:: images/editor/editor_13_evaluation_risk.png
+                    :align: center
+
+                    *When choosing 'Calculated' as the evaluation method, you may also set the default values for the calculation parameters.*
+
+            * **Evaluation-free**:
+                In this case, you must set the priority to a fixed value. The end-user will not evaluate
+                the risk at all, because it will not show up in the evaluation phase.
+
+                .. figure:: images/editor/editor_skip_evaluation.png
+                    :align: center
+
+                    *When choosing to let the user skip the evaluation, you need to set the priority yourself.*
+
+        Option **"Risk is always present"**
+
+          If this option is selected, then the end-user will always see this risk as being present when they are filling in the OiRA tool in the client. It will behave as if the user had answered "No", but without the possibility that the user can change this answer. All available evaluation methods can be used with this option. Compared to regular risks there are no differences regarding the action plan.
+
+                .. figure:: images/editor/editor_risk_always_present.png
+                    :align: center
+
+                    *An info-bubble informs about the consequences of selecting this option.*
+
+    #. **Policy**:
+        Refers to agreements, procedures, management decisions regarding
+        OSH issues. These issues can be answered behind a desk (no need to examine the
+        workplace).
+
+        Risks of this type are strictly speaking not risks
+        and therefore won't be evaluated by the end-users (during the
+        **Evaluation** phase of the risk assessment).
+        They are "high priority" by default.
+
 .. note::
 
   You can also consult a specific document on Types of risk and evaluation
   methods that recommends when to select which type of risk and evaluation
   method, and the related effects on the client. Available at
   http://www.oiraproject.eu/Resources/technical-guides/types-of-risk-and-evaluation-method
-
-    * **Risk type**:
-        There are 3 types of risk which you can choose from.
-
-        Risks that have been identified by the end-user,
-        need to be assigned a priority, and the risk's type determines
-        what this priority will be or how it will be calculated.
-
-        #. **Priority risk**:
-            Refers to a risk considered by the sector/authorities among the high risks in the sector.
-
-            Risks of this type automatically receive a priority of *high*, so
-            end-users will not be asked to evaluate them.
-
-            If you choose this option, all subsequent fields under the
-            *Evaluation* section in the form will disappear (since they won't
-            be applicable anymore).
-
-        #. **Risk**:
-            Refers to the existing risks at the workplace or linked to the work
-            carried out. To identify and evaluate such risks it is often necessary to
-            examine the workplace (to walk around the workplace and look at what could
-            cause harm; consult workers, etc.).
-
-            For this "risk" type, the developer has to choose an evaluation method.
-            The developer can choose from three options of evaluation methods:
-
-                * **Estimated**:
-
-                    .. figure:: images/editor/editor_14_risk_evaluation_estimated.png
-                        :align: center
-                        :alt: When choosing 'Estimated' as the evaluation method, you also need to set a default priority.
-
-                    During the **Evaluation** phase of the OiRA tool assessment, the
-                    end-user will determine the priority of a risk by selecting a value of **high, medium** or **low**.
-                    The developer can also choose a **default priority** that will appear to the end users who can nevertheless overrule it.
-
-                * **Calculated**:
-                    In this case, the risk's priority will be automatically calculated from the
-                    values of 2 or 3 different criteria, depending on the *evaluation algorithm*
-                    employed by the OiRA Tool, selected when you create the tool.
-                    For each criterion the developer can choose a default or
-                    leave the "no default" option(s). Providing a default
-                    gives an orientation to the end user how to evaluate the
-                    risk. However the end-user is always free to overrule the
-                    default recommendation.
-
-                    If the evaluation algorithm is the *Kinney method*, then the 3 criteria
-                    are:
-
-                    #. **Probability**
-                        How high is the probability that this risk will occur?
-                    #. **Frequency**
-                        How often is one exposed to this risk?
-                    #. **Severity**
-                        How severe is the danger posed by this risk?
-
-                    If the algorithm is the *simplified, 2 criteria* version, only *severity* and *frequency*
-                    (sometimes also referred to as *exposure*) are used as criteria.
-
-                    The values for these criteria are supplied by the end-user during the
-                    **Evaluation** phase, but you, as the developer, are
-                    able to provide default values.
-
-                    .. figure:: images/editor/editor_13_evaluation_risk.png
-                        :align: center
-
-                        *When choosing 'Calculated' as the evaluation method, you may also set the default values for the calculation parameters.*
-
-                * **Skip evaluation**:
-                    In this case, you must set to
-                    priority to a fixed value. The end-user will not evaluate
-                    the risk at all, because it will not show up in the evaluation phase.
-
-                    .. figure:: images/editor/editor_skip_evaluation.png
-                        :align: center
-
-                        *When choosing to let the user skip the evaluation, you need to set the priority yourself.*
-
-                    If a tool only consists of risks using the "skip evaluation" option, the end user will see the following sentence at the evaluation phase:
-
-                    **"Please proceed directly to the action plan step."**
-
-        #. **Policy**:
-            Refers to agreements, procedures, management decisions regarding
-            OSH issues. These issues can be answered behind a desk (no need to examine the
-            workplace).
-
-            Risks of this type are strictly speaking not risks
-            and therefore won't be evaluated by the end-users (during the
-            **Evaluation** phase of the risk assessment).
-            They are "high priority" by default.
 
 **Main Image and Secondary Images**:
 

@@ -262,6 +262,10 @@ generally need to be assigned a priority.
         **Evaluation** phase, although the content creator is again able to provide
         default values.
 
+    Option **"Risk is always present"**
+
+      If this option is selected, then the end-user will always see this risk as being present when they are filling in the OiRA tool in the client. It will behave as if the user had answered "No", but without the possibility that the user can change this answer. All available evaluation methods can be used with this option. Compared to regular risks there are no differences regarding the action plan.
+
 
     **Custom explanations for "Calculated" evaluation**
 
