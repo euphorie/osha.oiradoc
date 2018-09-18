@@ -65,7 +65,6 @@ Manuals
    index_sv
    manuals/why
    manuals/client
-   reports/tool_change_analysis_3539/index
 
 
 Indices and tables
