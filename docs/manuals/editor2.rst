@@ -843,12 +843,14 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
                 If the evaluation algorithm is the *Kinney method*, then the 3 criteria
                 are:
 
-                #. **Probability**
-                    How high is the probability that this risk will occur?
-                #. **Frequency**
-                    How often is one exposed to this risk?
-                #. **Severity**
-                    How severe is the danger posed by this risk?
+                **Probability**:
+                How high is the probability that this risk will occur?
+
+                **Frequency**:
+                How often is one exposed to this risk?
+
+                **Severity**:
+                How severe is the danger posed by this risk?
 
                 If the algorithm is the *simplified, 2 criteria* version, only *severity* and *frequency*
                 (sometimes also referred to as *exposure*) are used as criteria.
