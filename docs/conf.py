@@ -35,12 +35,11 @@ extensions = [
     'repoze.sphinx.autointerface',
     'sphinx.ext.graphviz',
 ]
-
-autodoc_default_flags = [
-    'private-members',
-    'undoc-members',
-    'show-inheritance'
-]
+autodoc_default_options = {
+    'private-members': None,
+    'undoc-members': None,
+    'show-inheritance': None
+}
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -230,7 +229,7 @@ latex_elements = {
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
 }
-
+latex_engine = 'xelatex'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).

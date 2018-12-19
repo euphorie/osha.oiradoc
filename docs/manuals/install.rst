@@ -77,16 +77,16 @@ The available options are:
 
 . table:: configuration options
 
-   +--------------------------+---------------------------------------+
-   | options                  | Description                           |
-   +==========================+=======================================+
-   | ``client``               | URL for the client (see also          |
-   |                          | :ref:`Virtual hosting`)               |
-   +--------------------------+---------------------------------------+
-   | ``terms-and-conditions`` | Boolean flag indicating it the client |
-   |                          | must ask users to accept the terms    |
-   |                          | and conditions of the site.           |
-   +--------------------------+---------------------------------------+
+   +--------------------------+-------------------------------------------+
+   | options                  | Description                               |
+   +==========================+===========================================+
+   | ``client``               | URL for the client (see also              |
+   |                          | :ref:`Virtual hosting <virtualhosting>`)  |
+   +--------------------------+-------------------------------------------+
+   | ``terms-and-conditions`` | Boolean flag indicating it the client     |
+   |                          | must ask users to accept the terms        |
+   |                          | and conditions of the site.               |
+   +--------------------------+-------------------------------------------+
 
 SQL database
 ------------
@@ -132,8 +132,10 @@ command::
    :py:mod:`euphorie.deployment.commands.xmlimport` module on the command line.
 
 
-Virtual hosts
--------------
+.. _virtualhosting:
+
+Virtual hosting
+---------------
 
 Euphorie requires two separate virtual hosts: one host for the client, and one
 for CMS tasks. It is common to use ``oira.example.com`` as hostname for the
