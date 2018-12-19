@@ -30,7 +30,7 @@ Manuals
 .. toctree::
    :maxdepth: 1
 
-   manuals/nl_be/creation-guide
+   manuals/nl-be/creation-guide
    manuals/editor2
    manuals/admin
 
