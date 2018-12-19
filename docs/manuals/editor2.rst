@@ -8,7 +8,7 @@ OiRA tools generator Manual
 General
 =======
 
-This manual as about the ‘admin’ website of the OiRA risk assessment
+This manual as about the ‘admin’ website (CMS) of the OiRA risk assessment
 platform, i.e. where developers create risk assessment tools that will be
 displayed on the ‘client’ website of the OiRA risk assessment platform,
 where end users (enterprises) access OiRA tools to perform a risk assessment.
@@ -17,34 +17,55 @@ where end users (enterprises) access OiRA tools to perform a risk assessment.
 Browsers
 --------
 
-Preferred web browsers to access OiRA (both admin and client) are: Mozilla
-Firefox version 3.6, or any later version, or Google Chrome (both are
-available to download for free). Alternatively Microsoft Internet Explorer
-version 10, or any later version.
+Preferred web browsers to access OiRA (both admin and client) are:
 
---------------------------
+* Google Chrome version 70 or later
+* Safari version 12 or later
+* Mozilla Firefox version 60 or later
+* Microsoft Edge
+* Microsoft Internet Explorer 11
+
+    .. note::
+
+      All versions of Internet Explorer lower than 11 are not supported!
+
+
+-----------------------
 Types of Login Accounts
---------------------------
+-----------------------
 
-There are two types of Login Account in OiRA:
+There are two types of Login Accounts in OiRA:
 
     * The country manager account: this account has to be created by EU-OSHA
-      and will allow the country manager to create sector(s) (and related
-      accounts) in his own country
+      and will allow the country manager to create sector(s) in their own country
 
-    * The sectoral account: for countries/organisations for which the country
+    * A sectoral account: for countries/organisations for which the country
       manager does not apply, EU-OSHA will create a sectoral account
 
-Country managers can create sectors by clicking the tab ‘User management’
+In both cases, EU-OSHA needs to create the account first, if it is not already present because it is used for other OSHA sites such as the OiRA community site or the OSHWiki. Once your account has been created you will receive an email, at the provided address, containing the login information. Please note: Both your user name and password are case sensitive!
+
+Country managers can create sectors by clicking the tab “User management”
 and then *Add new sector*
 
 .. figure:: images/editor/editor_add_sector.png
     :align: center
     :alt: A country manager can create sector.
 
-Once your account has been created you will receive an email, at the
-provided address, containing the login information. Please note: Both your
-user name and password are case sensitive!
+In order to promote a user to a sector manager, the country manager needs to enter this sector, and then use the “LDAP“ tab. There, the country manager can search for the target user and use the *Grant roles* button.
+For any current user who has the Sector Manager role, the *Revoke roles* button can be used to remove this role again.
+
+
+.. figure:: images/editor/editor_assign_sector.png
+    :align: center
+    :alt: A country manager can grant and revoke the Sector Manager role
+
+In similar fashion, any user can be made a Country Manager via the “LDAP” tab on a country. This action can only be performed by an OiRA administrator.
+
+.. figure:: images/editor/editor_assign_country.png
+    :align: center
+    :alt: A site administrator can grant and revoke the Country Manager role
+
+
 
 ----------
 Logging in
@@ -58,7 +79,7 @@ You start on: https://admin.oiraproject.eu
 
     *The OiRA generator login form*
 
-Login with your User Name and Password.
+Log in with your User Name and Password.
 Did you forget your password? Click at the
 bottom of the page on 'request a password reset'.
 Then add your user name and click on 'Send'.
@@ -95,10 +116,10 @@ Here you can: click on a tool to edit it, or start a new OiRA tool by clicking o
 Logging out
 -----------
 
-Don't forget to logout when you stop working in the OiRA tools generator. This is done with
+Don't forget to log out when you stop working in the OiRA tools generator. This is done with
 the button in the top right-hand corner: click on your login name and select 'Logout'.
 After logging out successfully, you will be brought back to the login
-screen where you will see the notification 'Logout successful'.
+screen where you will see the notification 'You have been logged out'.
 
 
 ========================
@@ -112,7 +133,7 @@ to the page below:
     :align: center
     :alt: The new OiRA tool form
 
-    *The new OiRA tool form*
+    *The “new OiRA tool” form*
 
 When creating a new OiRA tool you can choose from the following three
 options:
@@ -143,12 +164,16 @@ When this sector provides more than one version, you can view these
 versions and select one.
 
 Give the OiRA tool a name (title). This name will be shown to the end-user in
-the overview. Example: Hairdressers Risk Assessment Tool 2010. It is not possible to change this name.
+the overview. Example: Hairdressers Risk Assessment Tool 2010.
+
+  .. note ::
+
+     It is not possible to change this name later on, since it will be used to create the URL for this tool in the client. In case a change of the tool's name (title) is necessary, please contact EU-OSHA for assistance.
 
 Then click on 'Save Changes' at the bottom of the page.
 
 Your OiRA tool will then be created. Please note that this can take a while
-if you've chosen to copy of an existing OiRA tool.
+if you've chosen to copy from an existing OiRA tool.
 
 In case of a new (blank) OiRA tool you will see a screen as shown below:
 
@@ -182,7 +207,7 @@ In the sector overview page, we'll see the heading of the OiRA tool
 Having multiple versions is a very useful feature for a variety of reasons.
 
 * Whenever you need to make risky or invasive changes to your OiRA tool, you can create a new version to experiment with, while having the peace of mind that there is still a fully functional copy of the currently deployed OiRA tool.
-* Having different versions, together with the preview function, allows easy and rapid prototyping without affecting the OiRA tool currently being evaluated by users.
+* Having different versions, together with the preview function, allows easy and rapid prototyping without affecting the OiRA tool currently available to the end-users.
 * Once you have tested a new version, you can publish that specific version, thereby replacing the previous one.
 * Older versions can be kept for documentation purposes, indicating the history and eventual changes brought to the OiRA tool.
 
@@ -192,27 +217,27 @@ Updating an existing OiRA tool version usually requires you to only do minimal c
 
 #. Make sure you are on the context of an OiRA tool or one of its versions.
     You will see on the right side a column named **VERSIONS**.
-#. Mark an OiRA tool version by clicking on the radio button next to it's name.
+#. Mark an OiRA tool version by clicking on the radio button next to its name.
 
-    .. figure:: images/editor/editor_19_create_new_version.jpg
+    .. figure:: images/editor/editor_19_create_new_version.png
         :align: center
         :alt: Creating a new OiRA tool version by copying an existing one
 
         *Creating a new OiRA tool version by copying an existing one*
 
-#. Click the Duplicate button.
+#. Click the *Duplicate* button.
 #. Provide a Title
 
-   .. figure:: images/editor/editor_20_tool_version_form.jpg
+   .. figure:: images/editor/editor_20_tool_version_form.png
       :align: center
-      :alt: The new OiRA tool version add form
+      :alt: The “new OiRA tool version” add form
 
-      *The new OiRA tool version add form*
+      *The “new OiRA tool version“ add form*
 
 #. Make sure the correct base revision is selected. Base revision refers to the version of the tool you want to base the new version on. In our example we only have one version (Standard).
-#. Click the Create button.
+#. Click the *Create* button.
 
-Now you have a second OiRA tool version available and on which you can make changes that won't affect the original version. Once you are done, you can publish it and it will replace the existing OiRA tool.
+Now you have a second OiRA tool version available and on which you can make changes that won't affect the original version. Once you are done, you can publish it and it will replace the existing OiRA tool in the client.
 
 .. _edit-oira-tool:
 
