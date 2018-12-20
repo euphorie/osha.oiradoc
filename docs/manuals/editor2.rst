@@ -246,6 +246,8 @@ Now you have a second OiRA tool version available and on which you can make chan
 Editing an OiRA tool version
 ============================
 
+
+
 When on the context of an OiRA tool version, click the **Edit** button or
 hyperlink, to open the edit form.
 
@@ -262,6 +264,7 @@ You will then see a form similar to the one shown below.
       :alt: An OiRA tool version edit form
 
       *An OiRA tool version edit form*
+
 
 * **Version name**:
     You can modify the version name of the OiRA tool. The name you enter here
@@ -374,11 +377,10 @@ You will then see a form similar to the one shown below.
 Formatted Text
 --------------
 
-In certain forms in the OiRA tools generator, there exist special, larger
-fields in which you can add both plain and formatted text (*also known as rich text*).
+In certain forms in the OiRA tools generator, you will see larger fields in which you can add both plain and formatted text (*also known as rich text*).
 
 You will be able to identify this option from the editor-bar directly above such fields
-(the 'formatting bar'). In case there are multiple fields for rich text on a single page,
+(the “formatting bar”). In case there are multiple fields for rich text on a single page,
 each of them will have its own formatting bar.
 
     .. figure:: images/editor/editor_formatting_bar.png
@@ -389,19 +391,20 @@ each of them will have its own formatting bar.
       *Example of a rich text field with the formatting bar above it*
 
 It is important that you only copy a not formatted text into the field.
-Pasting formatted text from another program, e.g. Word, Excel, etc. may later cause displaying
-problems in the OiRA website for end-users (client).
+**Pasting formatted text from another program, e.g. Word, Excel, etc. may later cause displaying
+problems in the OiRA website for end-users (client)**, since it already contains markup code that can disrupt the correct display.
+
 You will not see this code when you paste the text onto the OiRA tools generator, but it does exist
-'underneath' the text. Hyperlinks also have a fixed format in Word (colour
-and underlining), which is unchangeable after pasting onto the OiRA tools generator. It's
-best to implement hyperlinks **after** the text has been entered correctly
-into the OiRA tools generator (see the explanation further below for creating links).
+“underneath” the text. Hyperlinks also have a fixed format in Word (colour
+and underlining), which is difficult to change after pasting onto the OiRA tools generator. It is
+best to insert hyperlinks **after** the text has been entered correctly
+into the OiRA tools generator (see the explanation further below on how to create links).
 
 Therefore, please **keep in mind that pasting text from another program can cause
 unexpected effects**. This applies to all fields in the OiRA tools generator where formatting is possible.
 This is why we advise you to type the text into the field without formatting,
 instead of pasting from a program. If you decide to paste text from a program, make sure that the text is not formatted.
-For instance, you can copy text from a word document to a Notepad document
+For instance, you can copy text from a Word document to a Notepad document
 (Notepad is a standard program available in almost all computers); Notepad
 does not support formatting the formatting will be deleted,
 and you can copy again from Notepad to OiRA.
@@ -411,24 +414,18 @@ The formatting bar offers the following options:
 * **Bold**:
     You select (by dragging the mouse) a portion of text and then click **B** in the formatting bar above the field.
 
-    * Selecting the same text again and clicking **B** will undo the bold font (this applies to all formatting options).
+    Selecting the same text again and clicking **B** will undo the bold font (this applies to all formatting options).
 
 * **Italic**:
     You select (by dragging the mouse) a portion of text and click on the **I** in the formatting bar above the field.
 
-    .. note::
-        Italicized text is generally not very legible on a screen.
-
-* **Bullet points:**
-    You select the required lines and click on the icon with the dots and stripes.
-
-* **Numbered list:**
-    You select the required lines and click on the icon with numbers (1-2) and stripes.
+* **Listings:**
+    You select the required lines and click on the icon with the dots and stripes. Then chose either **Unordered list** for a list with bullet points or **Ordered list** for a numbered list.
 
 * **Hyperlink (to a website):**
-    First type the text on which you would like to apply the hyperlink, for example: 'Also see this website'.
-    Subsequently you select the text (by dragging the mouse). You then click on the button with the chain icon in the formatting bar.
-    A new window will then open, while the rest of the screen appears greyed out:
+    First type the text on which you would like to apply the hyperlink, for example: “Also see this website”.
+    Then highlight the text (by dragging the mouse), click on the button with the chain icon in the formatting bar and select "Insert link"
+
 
     .. figure:: images/editor/editor_8_place_a_link.png
       :align: center
@@ -436,15 +433,20 @@ The formatting bar offers the following options:
 
       *Adding a hyperlink to formatted text*
 
+    A new window will then open which allows you to add the *URL*. The *Text* of the link is pre-filled by the text that you had highlighted.
+
+    .. figure:: images/editor/editor_9_place_a_link.png
+      :align: center
+      :alt: Filling in the details for a hyperlink
+
+      *Filling in the details for a hyperlink*
+
     * **URL**:
-        The address of the web page you want to link to, this must start with: 'http://' or 'https://'.
+        The address of the web page you want to link to, this must start with: 'https://' or 'http://'.
     * **Text**:
-        The title will appear in the tooltip when a person hovers his/her mouse
-        cursor above the hyperlink.
+        The title will appear in the tooltip when a person hovers their mouse cursor above the hyperlink.
     * **Open link in new window**:
-        Clicking on the link will open a new web page. By opening that web page
-        in a new browser window (or tab), your user will not lose the current
-        open page (i.e. the OiRA risk assessment site).
+        Clicking on the link will open a new web page. By opening that web page in a new browser window (or tab), your user will not lose the current open page (i.e. the OiRA risk assessment site).
 
     **To modify a link** or **to delete a link** simple click on the link. A context menu opens with the options to *Edit* (opening the window you already now from adding the link) or to *Unlink* (removing the hyperlink but keeping the text):
 
@@ -459,8 +461,7 @@ The formatting bar offers the following options:
         (e.g. Word or PDF files) on your OiRA tool, you first have to place the documents
         onto a website (e.g. the site of your sector's organisation) and then create a link to these files as described above.
 
-With 'Ctrl-z' (the *Ctrl* key together with the *z* key) you can undo formatting and textual changes you made in the formatted text field
-(multiple changes can be undone, as long as you haven't clicked 'Save').
+With 'Ctrl-z' (the *Ctrl* key together with the *z* key) you can undo formatting and textual changes you made in the formatted text field (multiple changes can be undone, as long as you haven't clicked 'Save').
 
 In addition, you can click the right button of your mouse when you are in
 a field, which will provide you with an applicable menu. When you select a
