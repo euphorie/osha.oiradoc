@@ -192,6 +192,7 @@ changes in legislation or other environmental changes.
 The OiRA tools generator makes this easy by allowing you to create and manage
 several different versions of your OiRA tool.
 
+
 When you create a new OiRA tool, you are creating the first version of the tool.
 
 By default, the first version will always be titled *Standard*.
@@ -268,8 +269,8 @@ You will then see a form similar to the one shown below.
     help you manage the different versions. When you create a new OiRA tool,
     its first version is automatically created and given the name *Standard*.
 
-* **Description**:
-    Short content description.
+* **Summary**:
+    A short description of the contents of the OiRA tool. This text will be displayed to then end user.
 
 * **Introduction**:
     Please provide some relevant and encouraging information for end-users of the OiRA tool. For example:
@@ -290,12 +291,23 @@ You will then see a form similar to the one shown below.
 
 * **Language**:
     Choose the language of your OiRA tool from the drop-down menu. **This action is mandatory**
-    in  order to ensure that the appropriate language of the OiRA interface is selected.
+    in order to ensure that the appropriate language of the OiRA interface is selected.
 
 * **Classification Code**:
     Write the NACE-code of your sector.
 
-* **Include a logo which links to an external website**:
+* **Type of OiRA Tool**
+    This setting determines how an OiRA tool is presented to the user:
+
+    * The **Classic** type will show the risk statement, the Yes / No question, plus the evaluation, where applicable. If the user answers with “No” or if the risk is a priority risk, then the risk will appear in the Action Plan, so that measures to mitigate it *in the future* be defined.
+
+    * An OiRA tool with **Measures already in place** takes different approach: Under the risk statement, the user can state which measures to mitigate the risk are *already in place now*. All “common solutions” provided by the tool creator can be selected, but the user can also describe their own solutions. The Yes / No question follows the list of those measures and asks the user if the already implemented measures are sufficient to take care of the risk, or if further measures need to be planned *for the future*. If the answer is “No, not sufficient”, then risk appears in the Action Plan. That means, this is the same behaviour as for the “classic” type).
+
+    While the type of tool can be changed at any time, it is important to be aware of the effects this has. Special care needs to be taken that the risk statements match the type of the tool.
+
+    For more details on this alternative tool type, see the chapter "XXXX OiRA tool with measures already in place" (t.b.d.)
+
+* **Include a logo which links to an external website**: (Optional)
     Your sector might already have chosen a logo that will appear in the bottom
     left corner of the OiRA risk assessment application.
 
@@ -303,21 +315,19 @@ You will then see a form similar to the one shown below.
     assessment site (https://client.oiraproject.eu).
 
     There is another option to include a logo which links
-    back to a selected web page. This logo will appear on the first page
+    back to a selected web page. This logo will appear on the first page that
     end-users visit as soon as they start with a risk assessment (the Preparation step).
 
     .. figure:: images/editor/editor_client_example_logos.png
       :align: center
-      :height: 512 px
       :alt: An example of the end-user facing OiRA site, showing the two different logos.
 
-      *An example of end-user facing OiRA risk assessment site (OiRA client), showing the two different logos*
+      *An example of end-user facing OiRA risk assessment site (OiRA client), showing the two different logos. Logo "1" is the logo pointing to the external organisation that we just entered. Logo "2" is the sector's logo.*
 
     If you tick the checkbox "Include a logo which links to an external website", 3 more fields will appear.
 
     * **External site URL**
-        This is the URL (website address) of the external website you would
-        like the logo to link to.
+        This is the URL (website address) of the external website you would like the logo to link to.
     * **External site name**
         This is the name of the website or its organisation
     * **External site logo**
@@ -328,6 +338,37 @@ You will then see a form similar to the one shown below.
       :alt: The 3 extra fields for adding a logo linking to an extenal website
 
       *The 3 extra fields for adding a logo linking to an external website*
+
+
+.. _custom_estimation_help:
+
+*  **The criteria applied to evaluate risks are specific of this tool? (If not, the common criteria descriptions will apply).**
+    With this setting, the hints displayed to the end user when a risk's severity needs to be calculated can be customised.
+
+    On a regular risk that is set to be "calculated" for its severity, the end user is presented with some questions in case the risk is present. The answer to those questions are used to calculate the severity. Next to every question, a help text is available that gives some hints to the user.
+
+    .. figure:: images/editor/evaluation_calculated_standard_hint.png
+      :align: center
+      :alt: The hint for one of the questions to evaluate the severity of the risk
+
+      *The hint for one of the questions to evaluate the severity of the risk (standard text)*
+
+    In case a tool creator wants to present different hints to the user, they can use this option to set custom texts.
+
+    .. figure:: images/editor/editor_evaluation_calculated_custom_hint.png
+      :align: center
+      :alt: Entering a custom hint text for the evaluation questions
+
+      *Entering a custom hint text for the evaluation questions*
+
+    The end user will then see this text in the Evaluation box instead of the default one.
+
+    .. figure:: images/editor/evaluation_calculated_custom_hint.png
+      :align: center
+      :alt: A hint with custom textz for one of the questions to evaluate the severity of the risk
+
+      *A hint with custom textz for one of the questions to evaluate the severity of the risk*
+
 
 --------------
 Formatted Text
@@ -1072,9 +1113,45 @@ Once finished, click *Save changes* at the bottom of the page.
 It is recommended to add several standard measures to each risk.
 You can add them by clicking the *Add Measure* button.
 
------------------------
+====================================================
+Customizing OiRA to reflect your organisation's logo
+====================================================
+
+You may customize the way the OiRA risk assessment tool will appear to
+end-users to let it reflect your organisation's logo.
+
+.. figure:: images/editor/editor_edit_sector_link.png
+    :align: center
+    :alt: The 'Edit' link on a sector
+
+    *The 'Edit' link on a sector*
+
+You will then see a form similar to this:
+
+.. figure:: images/editor/editor_16_selecting_colours.png
+    :align: center
+    :alt: The 'Settings' form for a sector
+
+    *The 'Settings' form for a sector (with a custom logo already present)*
+
+Without customisation, the standard OiRA logo is displayed on the sidebar of the client. But you may also upload your sector's own logo:
+
+
+Under *Logo* you check the box *My own*, then click on *Choose file* to navigate on your computer for selecting the image to upload. Finally, click on *Save* at the bottom of the page. You can change the image at a later date if needed, or switch back to the standard logo.
+
+For best results, take a transparent 'PNG' file with a height of at least 110 pixels. Larger logos will be resized automatically.
+
+.. figure:: images/editor/editor_17_logo_upload.png
+    :align: center
+    :alt: Changing the sector logo
+
+    *Changing the sector logo*
+
+
+
+=======================
 Checking your OiRA tool
------------------------
+=======================
 
 When all the work has been done, i.e. the structure and contents have been completed,
 you can preview your OiRA tool (prior to making it public) following these steps:
@@ -1119,81 +1196,9 @@ you can preview your OiRA tool (prior to making it public) following these steps
      The preview is stored in a separate place on the server, it won't be
      viewable to the end-users until you publish the OiRA tool.
 
----------------------------------------------------------------
-Customizing OiRA to reflect your organisation's logo and design
----------------------------------------------------------------
-
-You may customize the way the OiRA risk assessment tool will appear to
-end-users to let it reflect your organisation's logo and design.
-
-.. figure:: images/editor/editor_edit_sector_link.png
-    :align: center
-    :alt: The 'Edit' link on a sector
-
-    *The 'Edit' link on a sector*
-
-You will then see a form similar to this:
-
-.. figure:: images/editor/editor_16_selecting_colours.png
-    :align: center
-    :alt: The 'Settings' form for a sector
-
-    *The 'Settings' form for a sector*
-
-This form allows you to select two colours (a main colour and a supporting
-colour) and provides a preview to give you an indication what the end-user will see.
-
-To change a color, click, hold and drag on the rainbow circle above the main or supporting
-colour until you have the colour you want.
-
-The preview above the colour-pickers will immediately update to reflect your
-change.
-
-If you know the exact colour code of the colour you require, you can also enter
-it into the field underneath the color-pickers.
-
-.. note::
-
-    It's recommended to let a designer determine the colours. They can ensure
-    amongst other things that:
-
-    * Appearance is clearly identifiable with the sector.
-
-    * The text is legible
-
-    * Forms of colour blindness (at 10% of the male population) are taken
-      into account.
-
-The design changes are made to the sector, so they will apply to all OiRA tools created within
-that sector.
-
-Logo
-----
-
-One sector logo can be placed at the top left of the OiRA tool. If you want
-to include several logos, you will have to amalgamate these into one
-image.
-
-For best results, take a transparent 'PNG' file with a height of at least
-110 pixels. Larger logos will be resized automatically.
-
-.. figure:: images/editor/editor_17_logo_upload.png
-    :align: center
-    :alt: Changing the sector logo
-
-    *Changing the sector logo*
-
-**Include your sector's logo as follows:**
-
-Under *Logo* you check the box *My logo*, you then click on *Browse* next
-to *Choose file* to navigate to your own computer. To upload the image and
-link it to your OiRA tool, click on *Save* at the
-bottom of the page. You can change the image at a later date if needed,
-or opt for the standard logo.
-
----------------
+===============
 Ready? Publish!
----------------
+===============
 
 Once you've successfully completed all steps it's time to publish your
 OiRA tool.
