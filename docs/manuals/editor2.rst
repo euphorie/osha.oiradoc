@@ -494,14 +494,11 @@ has been saved.
 Creating the structure of an OiRA tool
 ======================================
 
-When completing/modifying the content it's essential to first consider
-the structure you will give your OiRA tool.
+When completing/modifying the content it is essential to first consider the structure that you will give your OiRA tool.
 
-With structure, we refer to the layout of *profile questions*, *modules* and *submodules*,
-as well as their contained *risks* and *measures*.
+With structure, we refer to the layout of *profile questions*, *modules* and *submodules*, as well as their contained *risks* and *measures*.
 
-Within a *module* or *profile question*, you can either add *submodules* or *risks*, a combination of
-both isn't possible. You can however add *risks* to a *submodule*.
+Within a *module* or *profile question*, you can either add *submodules* or *risks*; a combination of both isn't possible. You can however add *risks* to a *submodule*.
 
 ----------------------------------------------
 Copying or moving elements inside an OiRA tool
@@ -512,8 +509,8 @@ structure. Main modules and submodules may be added to, or removed from any part
 this structure. You can also copy and move modules, both within the OiRA tool
 and to other OiRA tools under your management (visible on the overview on the left).
 
-Click on the item which you'd like to copy or move, and open the menu
-*Actions* (top right, next to *Edit*). Choose the desired option, go to the area where you
+Click on the item which you would like to copy or move, and open the menu
+*Actions* (top right, next to *Edit*). Choose the desired option (Copy or, go to the area where you
 want to move it (click in the desired OiRA tool and folder) and choose
 *Paste* from the *Actions* menu.
 
@@ -522,6 +519,71 @@ want to move it (click in the desired OiRA tool and folder) and choose
       :alt: Cutting and Pasting items is done from the Actions menu
 
       *Cutting and Pasting items is done from the Actions menu*
+
+
+----------------------------------------
+Using the Library to copy useful content
+----------------------------------------
+
+Even though sectors and legislation differ across states, a lot of problems and risks are common, as are the proposed solutions. For this reason, EU-OSHA provides a library of risk assessment modules that can be re-used by all tool creators.
+
+To get an overview of what the library contains, you can use the link on the start page of the CMS and browse the contents.
+
+    .. figure:: images/editor/editor_library_link.png
+      :align: center
+      :alt: The link to the library on the start page of the CMS
+
+      *The link to the library on the start page of the CMS*
+
+The purpose of the library however is to provide easy access for copying relevant content to your own tool. When you are browsing your own tool, you will see a button “Library” in the same bar that also contains the “Edit” button.
+
+    .. figure:: images/editor/editor_library_use.png
+      :align: center
+      :alt: Access to the library inside an OiRA tool - here on the top level of a tool
+
+      *Access to the library inside an OiRA tool - here on the top level of a tool*
+
+After clicking this button, you will see the contents of the library ready for you to insert into your own tool. Only one library tool can be displayed at a time, therefore you can switch to the tool that you need by using the selector. For every item that is available for copying, you will see an “Insert” button next to it.
+
+    .. figure:: images/editor/editor_library_select_source.png
+      :align: center
+      :alt: The library contents, ready to be inserted into your tool
+
+      *The library contents, ready to be inserted into your tool*
+
+The selector lets you access all tools that are available in the library.
+
+    .. figure:: images/editor/editor_library_selection.png
+      :align: center
+      :alt: The selector of tools inside the library
+
+      *The selector to switch between tools inside the library*
+
+Once you have decided which content you want to copy into your own tool, click the *Insert* button. You will then be taken back to your own tool, where you will see a copy of the module or risk that you have just copied.
+
+    .. figure:: images/editor/editor_library_inserted_content.png
+      :align: center
+      :alt: A module has just been copied from the library
+
+      *A module has just been copied from the library*
+
+The library only allows you to insert that type of content that is allowed by the current context. That means,
+
+* if you open the library from the top of your tool, you will be able to insert modules and profile questions
+* if you open the library from inside a module that already contains risks, you will be able to insert risks
+* if you open the library from inside a module that contains submodules, you will be able to add modules
+
+In the following screen-shot, the library was opened from inside a module that already contains some risks. Therefore, only the risks inside the library have the *Insert* button, but not the modules.
+
+    .. figure:: images/editor/editor_library_inside_module.png
+      :align: center
+      :alt: The library, opened from a module that already contains risks
+
+      *The library, opened from a module that already contains risks*
+
+.. note::
+
+    All content that you copy from the library becomes part of your own OiRA tool. You can then proceed to modify it as it suits your needs. There is no connection to the content inside the library. That means if the library gets updated, your copied content will not be affected.
 
 
 -----------------
