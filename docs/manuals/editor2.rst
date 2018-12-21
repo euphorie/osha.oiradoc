@@ -945,9 +945,9 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
     For example:
         - *The floors are not free of obstacles.*
 
-        - *It’s not guaranteed that the floors are always free of obstacles.*
+        - *It is not guaranteed that the floors are always free of obstacles.*
 
-        - *It’s possible, that floors are sometimes occupied by obstacles.*
+        - *It is possible that floors are sometimes occupied by obstacles.*
 
 **Description**:
     Describe the risk and provide the end-user with any relevant
@@ -1069,13 +1069,6 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
         and therefore won't be evaluated by the end-users (during the
         **Evaluation** phase of the risk assessment).
         They are "high priority" by default.
-
-.. note::
-
-  You can also consult a specific document on Types of risk and evaluation
-  methods that recommends when to select which type of risk and evaluation
-  method, and the related effects on the client. Available at
-  http://www.oiraproject.eu/Resources/technical-guides/types-of-risk-and-evaluation-method
 
 **Main Image and Secondary Images**:
 
