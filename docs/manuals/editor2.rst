@@ -122,21 +122,34 @@ After logging out successfully, you will be brought back to the login
 screen where you will see the notification 'You have been logged out'.
 
 
-========================
-Creating a new OiRA tool
-========================
+==========================
+Setting up a new OiRA tool
+==========================
 
-After clicking on 'Add New OiRA tool' you will be brought
-to the page below:
+A new OiRA tool is created in two steps. First, you define the basic information such as the name of the tool and which kind of evaluation method should be used. These settings will stay fixed and cannot be changed later. In the second step, you provide more details about the tool, such as introductory text, information about its language and further options. You will be able to modify those settings at any time.
+
+----------------------
+Adding a new OiRA tool
+----------------------
+
+On the overview page of a sector, either click the link “add a new OiRA tool” at the bottom of the screen, or use the *Actions* menu at the top right to “Add new -> OiRA tool”.
+
+.. figure:: images/editor/editor_add_oira_tool.png
+    :align: center
+    :alt: Adding a new OiRA tool
+
+    *Adding a new OiRA tool*
+
+
+You will then be brought to the form below:
 
 .. figure:: images/editor/editor_5_addsurvey.png
     :align: center
-    :alt: The new OiRA tool form
+    :alt: The “new OiRA tool” form
 
     *The “new OiRA tool” form*
 
-When creating a new OiRA tool you can choose from the following three
-options:
+When creating a new OiRA tool you can choose from the following three options:
 
 #. **Create a new OiRA tool from scratch**
     This option is recommended when you already have an existing risk-assessment tool and would like to transfer this to OiRA.
@@ -152,30 +165,25 @@ options:
 #. **Base my OiRA tool on an existing OiRA tool of another organisation**
     You can decide which existing OiRA tool is most suitable for your sector. You can copy and modify it, and thus avoid having to create one from scratch. You have to determine the amendments for your own sector. For example, the butcher could copy and modify the OiRA tool of the fish retailer.
 
+    There is an alternative option for benefiting from already available content, which is explained in the :ref:`chapter about the Library <library>`.
+
     .. note ::
 
         After you've copied an existing OiRA tool, any changes made to the 'source' OiRA tool will not automatically be reflected in your own OiRA tool. When, for example, the butcher has copied the OiRA tool of the fish retailer and the fish retailer implements changes in their OiRA tool afterwards, these changes will not appear in the OiRA tool of the butcher.
 
-If you would like to copy the OiRA tool of another sector as a starting
-point, you need to first select the country in the drop-down menu and
-subsequently the sector of your choice.
+    If you would like to copy the OiRA tool of another sector as a starting point, you need to first select the country in the drop-down menu and subsequently the sector of your choice.
 
-When this sector provides more than one version, you can view these
-versions and select one.
+    If this sector provides more than one version, you will see all versions listed, so that you can chose the appropriate one.
 
-Give the OiRA tool a name (title). This name will be shown to the end-user in
-the overview. Example: Hairdressers Risk Assessment Tool 2010.
+Give the OiRA tool a name (title). This name will be shown to the end-user in the overview. Example: Hairdressers Risk Assessment Tool 2010.
 
   .. note ::
 
      It is not possible to change this name later on, since it will be used to create the URL for this tool in the client. In case a change of the tool's name (title) is necessary, please contact EU-OSHA for assistance.
 
-Then click on 'Save Changes' at the bottom of the page.
+Then click on “Create” at the bottom of the page. Please note that setting up a new OiRA tool can take a while if you've chosen to copy from an existing OiRA tool.
 
-Your OiRA tool will then be created. Please note that this can take a while
-if you've chosen to copy from an existing OiRA tool.
-
-In case of a new (blank) OiRA tool you will see a screen as shown below:
+In case of a new OiRA tool you will see a screen as shown below. Your new tool appears in the navigation in the left column and also in the list of tools and versions from your sector in the right column. The first version, called “Standard”, has automatically been created. More details about versions are explained :ref:`in the chapter on OiRA tool versions <oira-tool-versions>`.
 
 .. figure:: images/editor/editor_6_newsurvey.png
     :align: center
@@ -183,73 +191,13 @@ In case of a new (blank) OiRA tool you will see a screen as shown below:
 
     *A newly created OiRA tool*
 
-==================
-OiRA tool versions
-==================
-
-An OiRA tool should be revised periodically, usually to adapt it to the latest
-changes in legislation or other environmental changes.
-The OiRA tools generator makes this easy by allowing you to create and manage
-several different versions of your OiRA tool.
-
-
-When you create a new OiRA tool, you are creating the first version of the tool.
-
-By default, the first version will always be titled *Standard*.
-In the sector overview page, we'll see the heading of the OiRA tool
-(here called "New Risk Assessment") as well its first version ("Standard").
-
-   .. figure:: images/editor/editor_oira_tool_versions.png
-      :align: center
-      :alt: The new OiRA tool together with its first version
-
-      *The new OiRA tool together with its first version*
-
-Having multiple versions is a very useful feature for a variety of reasons.
-
-* Whenever you need to make risky or invasive changes to your OiRA tool, you can create a new version to experiment with, while having the peace of mind that there is still a fully functional copy of the currently deployed OiRA tool.
-* Having different versions, together with the preview function, allows easy and rapid prototyping without affecting the OiRA tool currently available to the end-users.
-* Once you have tested a new version, you can publish that specific version, thereby replacing the previous one.
-* Older versions can be kept for documentation purposes, indicating the history and eventual changes brought to the OiRA tool.
-
-Updating an existing OiRA tool version usually requires you to only do minimal changes to adapt it to latest amendments in legislation or new findings. In this case you don't want to create a new OiRA tool version from scratch but instead copy the old one and make amendments.
-
-**Steps for copying a new OiRA tool version:**
-
-#. Make sure you are on the context of an OiRA tool or one of its versions.
-    You will see on the right side a column named **VERSIONS**.
-#. Mark an OiRA tool version by clicking on the radio button next to its name.
-
-    .. figure:: images/editor/editor_19_create_new_version.png
-        :align: center
-        :alt: Creating a new OiRA tool version by copying an existing one
-
-        *Creating a new OiRA tool version by copying an existing one*
-
-#. Click the *Duplicate* button.
-#. Provide a Title
-
-   .. figure:: images/editor/editor_20_tool_version_form.png
-      :align: center
-      :alt: The “new OiRA tool version” add form
-
-      *The “new OiRA tool version“ add form*
-
-#. Make sure the correct base revision is selected. Base revision refers to the version of the tool you want to base the new version on. In our example we only have one version (Standard).
-#. Click the *Create* button.
-
-Now you have a second OiRA tool version available and on which you can make changes that won't affect the original version. Once you are done, you can publish it and it will replace the existing OiRA tool in the client.
-
 .. _edit-oira-tool:
 
-============================
-Editing an OiRA tool version
-============================
+-----------------------------------
+Editing the details of an OiRA tool
+-----------------------------------
 
-
-
-When on the context of an OiRA tool version, click the **Edit** button or
-hyperlink, to open the edit form.
+When on the context of an OiRA tool version, click the **Edit** button or hyperlink, to open the edit form.
 
     .. figure:: images/editor/editor_edit_link.png
       :align: center
@@ -266,6 +214,12 @@ You will then see a form similar to the one shown below.
       *An OiRA tool version edit form*
 
 
+The form contains a number of different fields: texts that will be shown to the end-user, metadata and a number of settings that allow specific modifications to how the OiRA tool behaves.
+
+Text fields and metadata
+------------------------
+
+
 * **Version name**:
     You can modify the version name of the OiRA tool. The name you enter here
     will not be visible to the end-user and is mainly intended to
@@ -275,7 +229,7 @@ You will then see a form similar to the one shown below.
 * **Summary**:
     A short description of the contents of the OiRA tool. This text will be displayed to then end user.
 
-* **Introduction**:
+* **Introduction text**:
     Please provide some relevant and encouraging information for end-users of the OiRA tool. For example:
 
     - The importance of risk assessment
@@ -296,11 +250,15 @@ You will then see a form similar to the one shown below.
     Choose the language of your OiRA tool from the drop-down menu. **This action is mandatory**
     in order to ensure that the appropriate language of the OiRA interface is selected.
 
-* **Classification Code**:
+* **Classification Code (optional)**:
     Write the NACE-code of your sector.
 
+
+Fields that allow special behaviour
+-----------------------------------
+
 * **Type of OiRA Tool**
-    This setting determines how an OiRA tool is presented to the user:
+    This setting determines how an OiRA tool is presented to the user.
 
     * The **Classic** type will show the risk statement, the Yes / No question, plus the evaluation, where applicable. If the user answers with “No” or if the risk is a priority risk, then the risk will appear in the Action Plan, so that measures to mitigate it *in the future* be defined.
 
@@ -308,7 +266,36 @@ You will then see a form similar to the one shown below.
 
     While the type of tool can be changed at any time, it is important to be aware of the effects this has. Special care needs to be taken that the risk statements match the type of the tool.
 
+    **If you are unsure what option to take, chose the *Classic* version.**
+
     For more details on this alternative tool type, see the chapter "XXXX OiRA tool with measures already in place" (t.b.d.)
+
+* **Show a custom notification for this OiRA tool?**
+    With this setting, you can define that all end-users of this OiRA tool will see a notification message with custom text when they use the tool.
+
+    If you tick the checkbox, you will see two more fields:
+
+
+    .. figure:: images/editor/custom_message_cms.png
+      :align: center
+      :alt: Enter title and text for a custom notification
+
+      *Enter title and text for a custom notification*
+
+    * **Tool notification title**
+        Enter the headline for the notification.
+
+    * **Tool notification message**
+        Enter the text that should be shown. You can use the usual formatting in the message, e.g. paragraphs, lists and bold text. You can also include links, so that you can provide a link to a new version of the tool or similar.
+
+    If the custom notification was activated, the end-user will see it in form of a pop-up when they open the tool in the client:
+
+    .. figure:: images/editor/custom_message_client.png
+      :align: center
+      :alt: The notification that the user gets to see
+
+      *The notification that the user gets to see*
+
 
 * **Include a logo which links to an external website**: (Optional)
     Your sector might already have chosen a logo that will appear in the bottom
@@ -321,13 +308,13 @@ You will then see a form similar to the one shown below.
     back to a selected web page. This logo will appear on the first page that
     end-users visit as soon as they start with a risk assessment (the Preparation step).
 
+    If you tick the checkbox "Include a logo which links to an external website", 3 more fields will appear.
+
     .. figure:: images/editor/editor_client_example_logos.png
       :align: center
       :alt: An example of the end-user facing OiRA site, showing the two different logos.
 
       *An example of end-user facing OiRA risk assessment site (OiRA client), showing the two different logos. Logo "1" is the logo pointing to the external organisation that we just entered. Logo "2" is the sector's logo.*
-
-    If you tick the checkbox "Include a logo which links to an external website", 3 more fields will appear.
 
     * **External site URL**
         This is the URL (website address) of the external website you would like the logo to link to.
@@ -338,7 +325,7 @@ You will then see a form similar to the one shown below.
 
     .. figure:: images/editor/editor_external_logo_fields.png
       :align: center
-      :alt: The 3 extra fields for adding a logo linking to an extenal website
+      :alt: The 3 extra fields for adding a logo linking to an external website
 
       *The 3 extra fields for adding a logo linking to an external website*
 
@@ -368,9 +355,9 @@ You will then see a form similar to the one shown below.
 
     .. figure:: images/editor/evaluation_calculated_custom_hint.png
       :align: center
-      :alt: A hint with custom textz for one of the questions to evaluate the severity of the risk
+      :alt: A hint with custom text for one of the questions to evaluate the severity of the risk
 
-      *A hint with custom textz for one of the questions to evaluate the severity of the risk*
+      *A hint with custom text for one of the questions to evaluate the severity of the risk*
 
 
 --------------
@@ -481,14 +468,67 @@ Alternatively, you can use the following keyboard shortcuts:
 
 * Search (within the field): Ctrl-f.
 
----------------
-Saving the form
----------------
 
-Once you are finished populating the form, click the **Save** button (at the bottom).
-This will take you back to the last screen. A yellow bar at the
-top will confirm that the item has been modified, which means that the information
-has been saved.
+.. _oira-tool-versions:
+
+==================
+OiRA tool versions
+==================
+
+An OiRA tool should be revised periodically, usually to adapt it to the latest
+changes in legislation or other environmental changes.
+The OiRA tools generator makes this easy by allowing you to create and manage
+several different versions of your OiRA tool.
+
+
+When you create a new OiRA tool, you are creating the first version of the tool.
+
+By default, the first version will always be titled *Standard*.
+In the sector overview page, we'll see the heading of the OiRA tool
+(here called "New Risk Assessment") as well its first version ("Standard").
+
+   .. figure:: images/editor/editor_oira_tool_versions.png
+      :align: center
+      :alt: The new OiRA tool together with its first version
+
+      *The new OiRA tool together with its first version*
+
+Having multiple versions is a very useful feature for a variety of reasons.
+
+* Whenever you need to make risky or invasive changes to your OiRA tool, you can create a new version to experiment with, while having the peace of mind that there is still a fully functional copy of the currently deployed OiRA tool.
+* Having different versions, together with the preview function, allows easy and rapid prototyping without affecting the OiRA tool currently available to the end-users.
+* Once you have tested a new version, you can publish that specific version, thereby replacing the previous one.
+* Older versions can be kept for documentation purposes, indicating the history and eventual changes brought to the OiRA tool.
+
+Updating an existing OiRA tool version usually requires you to only do minimal changes to adapt it to latest amendments in legislation or new findings. In this case you don't want to create a new OiRA tool version from scratch but instead copy the old one and make amendments.
+
+**Steps for copying a new OiRA tool version:**
+
+#. Make sure you are on the context of an OiRA tool or one of its versions.
+    You will see on the right side a column named **VERSIONS**.
+#. Mark an OiRA tool version by clicking on the radio button next to its name.
+
+    .. figure:: images/editor/editor_19_create_new_version.png
+        :align: center
+        :alt: Creating a new OiRA tool version by copying an existing one
+
+        *Creating a new OiRA tool version by copying an existing one*
+
+#. Click the *Duplicate* button.
+#. Provide a Title
+
+   .. figure:: images/editor/editor_20_tool_version_form.png
+      :align: center
+      :alt: The “new OiRA tool version” add form
+
+      *The “new OiRA tool version“ add form*
+
+#. Make sure the correct base revision is selected. Base revision refers to the version of the tool you want to base the new version on. In our example we only have one version (Standard).
+#. Click the *Create* button.
+
+Now you have a second OiRA tool version available and on which you can make changes that won't affect the original version. Once you are done, you can publish it and it will replace the existing OiRA tool in the client.
+
+
 
 ======================================
 Creating the structure of an OiRA tool
@@ -520,6 +560,7 @@ want to move it (click in the desired OiRA tool and folder) and choose
 
       *Cutting and Pasting items is done from the Actions menu*
 
+.. _library:
 
 ----------------------------------------
 Using the Library to copy useful content
