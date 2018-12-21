@@ -128,6 +128,8 @@ Setting up a new OiRA tool
 
 A new OiRA tool is created in two steps. First, you define the basic information such as the name of the tool and which kind of evaluation method should be used. These settings will stay fixed and cannot be changed later. In the second step, you provide more details about the tool, such as introductory text, information about its language and further options. You will be able to modify those settings at any time.
 
+.. _create-oira-tool:
+
 ----------------------
 Adding a new OiRA tool
 ----------------------
@@ -360,9 +362,9 @@ Fields that allow special behaviour
       *A hint with custom text for one of the questions to evaluate the severity of the risk*
 
 
---------------
+==============
 Formatted Text
---------------
+==============
 
 In certain forms in the OiRA tools generator, you will see larger fields in which you can add both plain and formatted text (*also known as rich text*).
 
@@ -481,11 +483,7 @@ The OiRA tools generator makes this easy by allowing you to create and manage
 several different versions of your OiRA tool.
 
 
-When you create a new OiRA tool, you are creating the first version of the tool.
-
-By default, the first version will always be titled *Standard*.
-In the sector overview page, we'll see the heading of the OiRA tool
-(here called "New Risk Assessment") as well its first version ("Standard").
+When you :ref:`create a new OiRA tool <create-oira-tool>`, the first version is automatically added. By default, it is titled *Standard*. In the sector overview page, we'll see the heading of the OiRA tool (here called “Cockles and Mussels“) as well its first version (“Standard”).
 
    .. figure:: images/editor/editor_oira_tool_versions.png
       :align: center
@@ -661,20 +659,20 @@ If the end-user answers *Yes*, they will be prompted to
 provide a name for each of the repeating instances or occurrences (i.e. for
 each store).
 
-As you can see, **profile questions enable you to include or exclude certain
+As you can see, **profile questions enable the end-user to include or exclude certain
 parts** of the risk assessment tool, depending on whether they apply to the
-end-user's particular situation or not.
+their particular situation or not.
 
-They are also **repeatable**, allowing the end-user to name the repeating instances
+They can also be made **repeatable**, allowing the end-user to name the repeating instances
 with names relevant to them (e.g. city centre bakery, bakery headquarters,
 bakery city park).
 
 Through this, the (sub)modules and risks associated with
-this **repeatable** profile will be repeated in the tool - once for each repeating instance.
+this **repeatable** profile will be repeated in the tool - once for each affected instance.
 Imagine this to be the same as if you would make paper copies of a certain part of
 a checklist, because it needs to be completed for each location's characteristics.
 
-Posing profile questions is particularly useful in sectors where it's probable
+Posing profile questions is particularly useful in sectors where it is probable
 that a substantial number of modules with risks aren't relevant to all
 companies. If you expect that most companies will complete practically all
 modules, posing profile questions will be unnecessary, unless you would like to
@@ -706,9 +704,9 @@ The following fields are available:
 
     * **Title**:
         The title will appear prominently above the profile question,
-        in the beginning of the OiRA tool, during the **Preparation** phase of the risk assessment,
-        before any risks are identified or evaluated (the so-called **Identification** and **Evaluation** phases).
-        Don't put a full-stop after the title. A number isn't needed either.
+        in the beginning of the OiRA tool, during the **Preparation** phase of the risk assessment, and also inside the navigation of the tool.
+
+        Don't put a full-stop after the title. A number isn't needed, either.
 
     * **Question**:
         This is the question that determines whether the profile question's
@@ -719,6 +717,9 @@ The following fields are available:
         For example:
 
             *Does your organisation provide mobile patrolling?*
+
+    * **Ask the user about (multiple) locations?**
+        If this setting is enabled, the user will be asked to provide a label for each location / instance that will be checked against the contents of this profile. Using this settings makes the profile repeatable.
 
     * **Multiple item question**:
         This question will be posed to the user only if they have answered *Yes* to
@@ -750,8 +751,7 @@ The following fields are available:
             *Please enter the name for each location you want to assess*
 
 
-A profile question acts as a module, in the sense that it is a container.
-You can now add modules and/or risks to it. Do that by clicking the "Add Module" or the "Add Risk" button.
+A profile question acts as a module, in the sense that it is a container. You can now add modules and/or risks to it. Do that by clicking the "Add Module" or the "Add Risk" button.
 
 .. figure:: images/editor/editor_10a_add_module_to_profile.png
     :align: center
@@ -764,14 +764,14 @@ Modules
 =======
 
 When the module structure is clear and the decision has been made whether
-profile questions will be posed or not, it's a good idea to first completely
+profile questions will be posed or not, it is a good idea to first completely
 build the module structure into the OiRA tools generator. Only after that should you
-add the risks to the modules. It's not useful to start adding
+add the risks to the modules. It is not useful to start adding
 risks to modules when the structure has not yet been determined.
 
----------------------------------------
+----------------
 Optional modules
----------------------------------------
+----------------
 
 Instead of determining which modules apply to the end-user by asking
 profile questions, there's also the possibility of initially offering all
@@ -797,12 +797,12 @@ question, only by answering *No*.
 The optional module feature can be used also at sub-modules level.
 
 Take into account that filter questions for optional modules should NOT refer to risks.
-For risks you can use the "not applicable"option (see more information below).
+For risks you can use the “not applicable” option (see more information below).
 
 Only one filter question may be used for each module/sub-module. It is always the
 first question (as affirmative statement) that is displayed in the module.
 
-It's useful to start determining which modules could or should start with
+It is useful to start determining which modules could or should start with
 a filter question during the preparation of the module structure.
 See below for information on how to enter an optional module.
 
@@ -810,14 +810,13 @@ See below for information on how to enter an optional module.
 Adding a module
 ---------------
 
-When you are on an OiRA tool, you can create a module by clicking the *Add
-Module* button, as shown in the screenshot below.
+When you are on an OiRA tool, or inside a profile question, or inside a module that does not contain any risks, you can create a new module by clicking the *Add Module* button, as shown in the screen-shot below.
 
 .. figure:: images/editor/editor_9_creating_modules.png
     :align: center
     :alt: The location of the *Add Module* button
 
-    *The location of the *Add Module* button
+    *The location of the “Add Module” button*
 
 You will the see the following form:
 
@@ -834,7 +833,7 @@ with the following fields:
         *Working at height* or *Physical Work*, etc. The end-user will see this
         title at the top of the page for the duration of answering this
         module's risks. Don't put a full stop after the title. A number
-        isn't needed either, the module will be numbered automatically.
+        isn't needed either, since the module will be numbered automatically.
         Keep it short and simple. Use everyday language and make sure the end-user
         will immediately understand it.
 
@@ -851,18 +850,19 @@ with the following fields:
 
         If you have decided to make the module optional by ticking this box,
         an extra field labelled *Question* will appear, in
-        which you must write the 'filter question' as an affirmative statement.
+        which you must write the 'filter question' as an affirmative statement
+
+        .. figure:: images/editor/editor_optional_module.png
+            :align: center
+            :alt:  Making a module optional
+
+            *Making a module optional*
 
         The answer has to be *Yes* or *No*. If *No* is answered,
         the end-user will skip the module (as explained above).
 
    **Image file**:
-        You can add an image. It is important to add RGB (*Red, Green, Blue*)
-        encoded images and **not** CMYK (*Cyan, Magenta, Yellow, Black*). This is
-        important because images will be resized after they have been uploaded. The
-        CMYK images change in colour when they are resized. When you have uploaded an
-        image and afterwards its colour seems wrong, it might be that you
-        have uploaded an CMYK image. Please replace it with an RGB image.
+        You can add an image that will be shown along with the module's title and description. Please use a JPEG, PNG or GIF file and make sure that the image is of high quality and is not scaled down. Large images will automatically be scaled to the correct size.
 
    **Solution overview**:
         At the modular level, generic/orienting solutions could be provided.
@@ -870,23 +870,31 @@ with the following fields:
         of avoiding the risk, substituting the dangerous by the non-(or less)
         dangerous, combating risk at source. The solution could focus
         on different aspects: technical and/or organisational, ...
+
         The text you enter here will appear in the **Action Plan** phase.
         This Overview of solution at module level should be compatible/complementary
         with the measure(s) proposed at risk level.
 
-Once you've filled in the forms, click *Save* at the bottom of the screen.
+    **Additonal content**
+        You can upload up to four files that might supplement the contents of the module or aid the end-user in their risk assessment. These files will be shown on the module in the client. If you do not provide a content caption, then the file name will be shown to the user:
 
-To add more top-level modules, click again on the top link in the navigation
-tree on the left and then click the button *Add Module*.
+        .. figure:: images/editor/module_additional_content.png
+            :align: center
+            :alt:  “Additional content” files shown on a module
 
-To add a submodule to the current module, click on the module where you want to add the submodule.
-Then click *Add Submodule* on the top bar.
+            *“Additional content” files shown on a module*
 
-You can modify modules and submodules as well as all other information you enter
-at a later stage by clicking the *Edit* button.
-With the Action menu (top right) you can cut, copy and delete modules and
-by dragging them (up or down) you can change order of appearance.
-You should do this before publishing the OiRA tool.
+
+
+Once you have filled in the forms, click *Save* at the bottom of the screen.
+
+To add more top-level modules, click again on the top link in the navigation tree on the left and then click the button *Add Module*.
+
+To add a submodule to the current module, click on the module where you want to add the submodule. Then click *Add Submodule* on the top bar.
+
+You can modify modules and submodules as well as all other information you enter at a later stage by clicking the *Edit* button.
+
+With the Action menu (top right) you can cut, copy and delete modules and by dragging them (up or down) you can change order of appearance. You should do this before publishing the OiRA tool.
 
 =====
 Risks
@@ -1355,7 +1363,7 @@ You can create a new version before modifying a tool. See
 `OiRA tool versions`_ for more information.
 
 Instead of changing the existing tool you could also create a new tool based
-on the existing one, see `Creating a new OiRA tool`_. This may avoid some
+on the existing one, see `Setting up a new OiRA tool`_. This may avoid some
 confusion for users as the old version does not need to be replaced but
 instead a new tool is created under a new URL. However the new tool will have
 a completely separate identity, in particular any saved sessions will stay
