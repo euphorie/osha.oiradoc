@@ -228,6 +228,9 @@ latex_elements = {
 
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
+
+    # Use class openany to prevent blank pages in front of new chapters
+    'extraclassoptions': 'openany',
 }
 latex_engine = 'xelatex'
 # Grouping the document tree into LaTeX files. List of tuples
