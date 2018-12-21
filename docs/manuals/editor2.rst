@@ -272,6 +272,8 @@ Fields that allow special behaviour
 
     For more details on this alternative tool type, see the chapter "XXXX OiRA tool with measures already in place" (t.b.d.)
 
+.. _custom-notification:
+
 * **Show a custom notification for this OiRA tool?**
     With this setting, you can define that all end-users of this OiRA tool will see a notification message with custom text when they use the tool.
 
@@ -500,7 +502,7 @@ Having multiple versions is a very useful feature for a variety of reasons.
 
 Updating an existing OiRA tool version usually requires you to only do minimal changes to adapt it to latest amendments in legislation or new findings. In this case you don't want to create a new OiRA tool version from scratch but instead copy the old one and make amendments.
 
-**Steps for copying a new OiRA tool version:**
+**Steps for creating a new OiRA tool version:**
 
 #. Make sure you are on the context of an OiRA tool or one of its versions.
     You will see on the right side a column named **VERSIONS**.
@@ -1261,7 +1263,7 @@ Checking your OiRA tool
 When all the work has been done, i.e. the structure and contents have been completed,
 you can preview your OiRA tool (prior to making it public) following these steps:
 
-#. Make sure you have an end-user account in the OiRA tool (http://client.oiraproject.eu/) You create an account in the OiRA client here https://client.oiraproject.eu/@@register
+#. Make sure you have an end-user account in the OiRA tool (https://oiraproject.eu/oira-tools/) You create an account in the OiRA client here https://oiraproject.eu/oira-tools/@@register
 #. In the *Versions drawer* (see `OiRA tool versions`_) on the right hand, chose the version you want to preview and, click the *Preview* link next to your OiRA tool version.
 
    .. figure:: images/editor/editor_versions_drawer.png
@@ -1338,83 +1340,111 @@ publish the tool. This way EU-OSHA can ensure that your tool will be included
 on the OiRA project site (http://www.oiraproject.eu). You don't have to notify
 the OiRA team when you have updated the OiRA tool.
 
-===============================
-Modifying an existing OiRA tool
-===============================
+================================
+Re-working a published OiRA tool
+================================
 
-The chapters prior to this are based on creating a new OiRA tool, potentially
-on the basis of an existing OiRA tool.
+In the life-time of an OiRA tool, changes will become necessary, e.g. due to changed legislation, based on user feedback or following re-structuring inside a sector. This chapter provides you with guidelines to follow when you want to make changes to an OiRA tool that has already been published.
 
-Naturally the process of creating an OiRA tool will be followed by managing
-and maintaining your OiRA tool.  At present, the exact same considerations,
-focus points and functionalities apply to this process.
+The most important aspect to consider is the **impact on existing users of this OiRA tool**: Will the changes that you want to introduce cause existing users to lose (parts of) their answers? Will a user who has already done a risk assessment based on your tool still be able to download the report for it?
 
-After adapting the OiRA tool you check it with the Preview and then publish
-it, as described above.
+Here are some considerations to help you decide how to proceed:
 
-You can create a new version before modifying a tool. See
-`OiRA tool versions`_ for more information.
+-----------------------------
+Changes that are not critical
+-----------------------------
 
-Instead of changing the existing tool you could also create a new tool based
-on the existing one, see `Setting up a new OiRA tool`_. This may avoid some
-confusion for users as the old version does not need to be replaced but
-instead a new tool is created under a new URL. However the new tool will have
-a completely separate identity, in particular any saved sessions will stay
-associated with the old tool, which may not be what you want.
+If you simply add new risks or modules, then existing users will see the new contents (modules and risks) appearing in their existing session, without answers of course.
+
+This kind of change is not critical. Existing users only need to fill in the blanks when they return to their saved sessions.
+
+In similar fashion, you can update *already existing* modules, sub-modules, risks, profile questions or measures *in place*. This means: in the CMS, you might change title, description, type of risk, attachments, etc. Existing users will simply see the updated texts, images, etc., but their answers stay intact.
+
+This kind of change is also not critical.
+*Exception*: the change in wording changes the meaning of a risk statement or similar in such a way that a previous risk assessment is no longer valid.
+
+For these kind of changes, it is safe to do the changes in place, so that the URL of the OiRA tool will stay the same. More details below under “Option 1”.
+
+
+--------------------------------------
+Changes that require special attention
+--------------------------------------
+
+Any change to the structure of an OiRA tool is potentially dangerous with regards to the answers of existing users. Examples:
+
+* A risk gets moved from one (sub-) module to another.
+* A module gets moved into a profile question (or the other way around).
+* Two modules get combined into one, or one module gets split into 2 modules.
+
+In all these case, the affected risks / modules receive a new “parent” in the tool. For existing risk assessments, the software will then not know any more that the answers from the user (the Yes/No + the measures) belong to a risk that has a different parent. That means, the answers will be lost.
+
+Therefore, for changes that affect the structure of an OiRA tool, the recommendation is to **create a new tool that has a different URL than the old version**. This will allow existing users to keep accessing their risk assessment (including the report) under the old URL, while all new users will be sent to the new URL of the tool. More details under “Option 2”.
+
+The potential drawback is that all users who want to benefit from the new version of the OiRA tool need to perform the risk assessment from scratch. This is not relevant for new users, but existing users will have to answer all questions again, in case they want to use the new version. It is not possible to copy over previously given answers or measures.
+
 
 -----------------------------------
-Modifying risk and evaluation types
+Option 1: Replacing a tool in place
 -----------------------------------
 
-If you modify a Risk and publish the modifications this may affect your clients
-saved sessions.
+The simplest form of making changes in place is to edit the risks / modules in the CMS and then re-publishing the tool when you are finished. This is especially relevant for minor changes like fixing typos, adjusting links, etc.
 
-Whenever a risk's evaluation method is changed from Calculated to Estimated,
-then in the already existing sessions the previously calculated priority value will
-be kept. This is independent of whether the new Estimated method gets
-default values or not.
+For larger changes (but ones that do not affect the structure), you might want to keep the current version in the CMS and apply your changes in a new version (of the same OiRA tool). This can have the benefit that you can already work on the changes for the new version. But it will allow you to still make adjustments to the current version (e.g. fixing typos) without having to make all changes live. Once you publish the new verion, the existing tool in the client will be replaced by the new version (**under the same URL**).
 
-If the developer changes a Risk from Evaluated or Calculate to Skip
-evaluation, the Risk will not be evaluated when you run the evaluation step.
+See the :ref:`chapter on OiRA tool versions <oira-tool-versions>` on how to create a new version.
 
-If the risk type changes from a Risk to a Policy risk or Priority risk,
-nothing happens with the saved sessions. In the saved session the risk will
-remain a non-policy, non-priority Risk, and it will remain as Evaluated or
-Calculated, as before.
+-------------------------------------------------------
+Option 2: Creating a new version in a separate location
+-------------------------------------------------------
 
---------------------------
-Updating of saved sessions
---------------------------
+:ref:`Create a new OiRA tool <create-oira-tool>`, pick the option “Base my new OiRA Tool on an existing OiRA Tool of my organisation” and select the old tool you wish to copy from.
 
-When changes are made to a tool, existing sessions will not be updated
-immediately but only when the user goes back to them in the client. (This also
-affects the available data for the statistical reports.) At this time the data
-will be updated and any newly created, changed or deleted modules or risks
-will be taken into account. E.g. answers to deleted risks will be discarded.
+The new OiRA tool will be created in a new location as a copy. All modules, profiles, risks, etc. are copied. You can now safely re-arrange the structure.
 
-Note that only changing the order of risks will not be reflected in existing
-sessions unless new risks were also created or existing ones deleted.
+And when you publish the OiRA tool, **it will have a different URL**.
+
+---------------------
+Communication aspects
+---------------------
+
+These are especially relevant for option 2.
+
+Prevent new users from using the old tool
+-----------------------------------------
+
+Any user who has an existing risk assessment from of the old version will still see it when they log in to OiRA on the list of available sessions.
+
+But you want to prevent new users from starting a new session of the old version. Therefore, the old version of the tool needs to be marked as “obsolete”. This will prevent it from being displayed in the list of available tools in the OiRA client (under “Start a new session”).
+
+.. figure:: images/editor/client_list_of_tools.png
+    :align: center
+    :alt: List of available tools shown to the user
+
+    *List of available tools shown to the user*
+
+To achieve this, edit the OiRA tool in the CMS and tick the check-box “Obsolete OiRA tool”. The OiRA tool then needs to be published again for this change to become active.
+
+.. figure:: images/editor/editor_obsolete_tool.png
+    :align: center
+    :alt: Marking an OiRA tool as obsolete
+
+    *Marking an OiRA tool as obsolete*
+
+
+Inform existing users that a new version available
+--------------------------------------------------
+
+Even though existing users of the old version might be content to just access their answers and the reports under the old URL, they might benefit from the new version of the OiRA tool. This might be relevant for example when the OiRA tool was adapted to a changed legislation.
+
+Apart from communication channels outside of the OiRA application (e.g. the OiRA website, the website of your organization, newsletters, etc.), you can also place a message directly inside OiRA that gets shown to users who access the old version.
+
+See the :ref:`section about adding a custom notification <custom-notification>` on how to achieve this.
+
 
 -------------------
 Unpublishing a tool
 -------------------
 
-A tool can be unpublished. Unpublishing makes a tool unavailable in the
-OiRA client. Any saved sessions will be retained and can be accessed again if
-you re-publish the tool later.
+A tool can be unpublished. Unpublishing makes a tool unavailable in the OiRA client. Any saved sessions will be retained and can be accessed again if you re-publish the tool later.
 
 You do not need to unpublish a tool to make modifications.
-
----------------------------------------------------------
-Publishing/unpublishing a tool with a session in progress
----------------------------------------------------------
-
-When a new version of a tool is published while a session is in progress, the
-changes will be visible the next time the user's browser loads a page from the
-server, i.e. most links and other client controls will make the changes visible
-immediately and without warning.
-
-When a tool is unpublished while a session is in progress, the user will get a
-"Not found" page. There should probably be some kind of communication before a
-tool is unpublished because the user will not see what has happened from this
-page.
