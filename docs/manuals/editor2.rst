@@ -44,12 +44,15 @@ There are two types of Login Accounts in OiRA:
 
 In both cases, EU-OSHA needs to create the account first, if it is not already present because it is used for other OSHA sites such as the OiRA community site or the OSHWiki. Once your account has been created you will receive an email, at the provided address, containing the login information. Please note: Both your user name and password are case sensitive!
 
-Country managers can create sectors by clicking the tab “User management”
-and then *Add new sector*
+Country managers can create sectors by clicking the tab “User management” and then *Add new sector*
 
 .. figure:: images/editor/editor_add_sector.png
     :align: center
+    :height: 250 px
     :alt: A country manager can create sector.
+
+    *A country manager can create sector*
+
 
 In order to promote a user to a sector manager, the country manager needs to enter this sector, and then use the “LDAP“ tab. There, the country manager can search for the target user and use the *Grant roles* button.
 For any current user who has the Sector Manager role, the *Revoke roles* button can be used to remove this role again.
@@ -57,13 +60,19 @@ For any current user who has the Sector Manager role, the *Revoke roles* button 
 
 .. figure:: images/editor/editor_assign_sector.png
     :align: center
+    :height: 380 px
     :alt: A country manager can grant and revoke the Sector Manager role
+
+    *A country manager can grant and revoke the Sector Manager role*
 
 In similar fashion, any user can be made a Country Manager via the “LDAP” tab on a country. This action can only be performed by an OiRA administrator.
 
 .. figure:: images/editor/editor_assign_country.png
     :align: center
+    :height: 380 px
     :alt: A site administrator can grant and revoke the Country Manager role
+
+    *A site administrator can grant and revoke the Country Manager role*
 
 
 
@@ -75,9 +84,10 @@ You start on: https://admin.oiraproject.eu
 
 .. figure:: images/editor/editor_1_login.png
     :align: center
+    :height: 300px
     :alt: The OiRA tools generator login form
 
-    *The OiRA generator login form*
+    *The OiRA CMS login form*
 
 Log in with your User Name and Password.
 Did you forget your password? Click at the
@@ -86,18 +96,20 @@ Then add your user name and click on 'Send'.
 
    .. figure:: images/editor/editor_2_password_reset.png
       :align: center
+      :height: 300px
       :alt: The OiRA generator password reset form
 
-      *The OiRA generator password reset form*
+      *The OiRA CMS password reset form*
 
 You will be redirected back to the login page and a green bar will appear,
 confirming that the password will be sent to the email address you provided.
 
    .. figure:: images/editor/editor_3_password_reset_confirmation.png
       :align: center
+      :height: 380px
       :alt: The OiRA generator password reset confirmation
 
-      *The OiRA generator password reset confirmation*
+      *The OiRA CMS password reset confirmation*
 
 If your login has been successful, a green bar with a confirmation will appear.
 
@@ -343,6 +355,7 @@ Fields that allow special behaviour
 
     .. figure:: images/editor/evaluation_calculated_standard_hint.png
       :align: center
+      :height: 250px
       :alt: The hint for one of the questions to evaluate the severity of the risk
 
       *The hint for one of the questions to evaluate the severity of the risk (standard text)*
@@ -359,6 +372,7 @@ Fields that allow special behaviour
 
     .. figure:: images/editor/evaluation_calculated_custom_hint.png
       :align: center
+      :height: 250px
       :alt: A hint with custom text for one of the questions to evaluate the severity of the risk
 
       *A hint with custom text for one of the questions to evaluate the severity of the risk*
@@ -428,6 +442,7 @@ The formatting bar offers the following options:
 
     .. figure:: images/editor/editor_9_place_a_link.png
       :align: center
+      :height: 300px
       :alt: Filling in the details for a hyperlink
 
       *Filling in the details for a hyperlink*
@@ -510,6 +525,7 @@ Updating an existing OiRA tool version usually requires you to only do minimal c
 
     .. figure:: images/editor/editor_19_create_new_version.png
         :align: center
+        :height: 200px
         :alt: Creating a new OiRA tool version by copying an existing one
 
         *Creating a new OiRA tool version by copying an existing one*
@@ -519,6 +535,7 @@ Updating an existing OiRA tool version usually requires you to only do minimal c
 
    .. figure:: images/editor/editor_20_tool_version_form.png
       :align: center
+      :height: 200px
       :alt: The “new OiRA tool version” add form
 
       *The “new OiRA tool version“ add form*
@@ -698,6 +715,7 @@ You will see the following page:
 
 .. figure:: images/editor/editor_10_profile_question.png
     :align: center
+    :height: 380px
     :alt: The profile question add form
 
     *The profile question add form*
@@ -757,6 +775,7 @@ A profile question acts as a module, in the sense that it is a container. You ca
 
 .. figure:: images/editor/editor_10a_add_module_to_profile.png
     :align: center
+    :height: 100px
     :alt: The buttons for adding a risk or module
 
     *The buttons for adding a risk or module*
@@ -824,6 +843,7 @@ You will the see the following form:
 
 .. figure:: images/editor/editor_11_add_module.png
     :align: center
+    :height: 700px
     :alt:  The *Add Module* form
 
     *The Add Module form*
@@ -882,6 +902,7 @@ with the following fields:
 
         .. figure:: images/editor/module_additional_content.png
             :align: center
+            :height: 250px
             :alt:  “Additional content” files shown on a module
 
             *“Additional content” files shown on a module*
@@ -921,9 +942,21 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
 .. figure:: images/editor/editor_12_add_risk.png
     :align: center
-    :alt: The 'Add Risk' form
+    :alt: The “Add Risk” form, upper part
 
-    *The 'Add Risk' form*
+    *The “Add Risk” form, upper part*
+
+.. figure:: images/editor/editor_12b_add_risk.png
+    :align: center
+    :alt: The “Add Risk” form, middle part (Evaluation)
+
+    *The “Add Risk” form, middle part (Evaluation)*
+
+.. figure:: images/editor/editor_12c_add_risk.png
+    :align: center
+    :alt: The “Add Risk” form, lower part (Images and additional content)
+
+    *The “Add Risk” form, lower part (Images and additional content)*
 
 **Affirmative Statement**:
     Write a short affirmative statement about a possible risk
@@ -1004,7 +1037,9 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_14_risk_evaluation_estimated.png
                     :align: center
-                    :alt: When choosing 'Estimated' as the evaluation method, you also need to set a default priority.
+                    :alt: When choosing “Estimated” as the evaluation method, you also need to set a default priority.
+
+                    *When choosing “Estimated” as the evaluation method, you also need to set a default priority.*
 
                 During the **Evaluation** phase of the OiRA tool assessment, the
                 end-user will determine the priority of a risk by selecting a value of **high, medium** or **low**.
@@ -1041,8 +1076,9 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_13_evaluation_risk.png
                     :align: center
+                    :alt: When choosing “Calculated” as the evaluation method, you may also set the default values for the calculation parameters.
 
-                    *When choosing 'Calculated' as the evaluation method, you may also set the default values for the calculation parameters.*
+                    *When choosing “Calculated” as the evaluation method, you may also set the default values for the calculation parameters.*
 
             * **Evaluation-free**:
                 In this case, you must set the priority to a fixed value. The end-user will not evaluate
@@ -1050,6 +1086,8 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_skip_evaluation.png
                     :align: center
+                    :height: 300px
+                    :alt: When choosing to let the user skip the evaluation, you need to set the priority yourself.
 
                     *When choosing to let the user skip the evaluation, you need to set the priority yourself.*
 
@@ -1059,6 +1097,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_risk_always_present.png
                     :align: center
+                    :alt: An info-bubble informs about the consequences of selecting this option.
 
                     *An info-bubble informs about the consequences of selecting this option.*
 
@@ -1079,6 +1118,13 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
     You should use these images to help describe the risk situation and eventually
     also the correct situation as a contrast.
 
+    .. figure:: images/editor/add_risk_images.png
+        :align: center
+        :alt: The section on the risk edit form for adding images
+
+        *The The section on the risk edit form for adding images*
+
+
     You will have to upload these images yourself. Make sure that the
     images are clear and legible, not too large
     in surface size (maximum 300 x 300 pixels on the screen) and file size
@@ -1093,13 +1139,22 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
 **Additional Content**
 
-    If you have additional content (files such as PDF, Word or Excel documents) that can help
-    explain a risk situation, you can add up to four such documents here. In the OiRA application,
-    the user will see a link to each of the uploaded files that allows them to download them. If you provide a caption for a file, this will be displayed to the user, otherwise the file-name
-    will be shown:
+    If you have additional content (files such as PDF, Word or Excel documents) that can help explain a risk situation, you can add up to four such documents here.
+
+    .. figure:: images/editor/add_risk_additional_content.png
+        :align: center
+        :alt: The section on the risk edit form for adding additional content
+
+        *The section on the risk edit form for adding additional content*
+
+    In the OiRA application, the user will see a link to each of the uploaded files that allows them to download them. If you provide a caption for a file, this will be displayed to the user, otherwise the file-name will be shown:
 
     .. figure:: images/editor/editor_additional_content.png
        :align: center
+       :height: 350px
+       :alt: Additional content shown in the OiRA application
+
+       *Additional content shown in the OiRA application*
 
 
 Once you are done, click on *Save* (at the bottom of the page).
@@ -1165,9 +1220,10 @@ You will then see the following form:
 
     .. figure:: images/editor/editor_15_add_measure.png
         :align: center
-        :alt: The 'Add Measure' form
+        :height: 350px
+        :alt: The “Add Measure” form
 
-        *The 'Add Measure' form*
+        *The “Add Measure” form*
 
 **Description**:
 
@@ -1229,19 +1285,21 @@ end-users to let it reflect your organisation's logo.
 
 .. figure:: images/editor/editor_edit_sector_link.png
     :align: center
-    :alt: The 'Edit' link on a sector
+    :height: 350px
+    :alt: The “Edit” link on a sector
 
-    *The 'Edit' link on a sector*
+    *The “Edit” link on a sector*
 
-You will then see a form similar to this:
+You will then see a form similar to the one shown in the image below.
 
 .. figure:: images/editor/editor_16_selecting_colours.png
     :align: center
-    :alt: The 'Settings' form for a sector
+    :height: 550px
+    :alt: The “Settings” form for a sector
 
-    *The 'Settings' form for a sector (with a custom logo already present)*
+    *The “Settings” form for a sector (with a custom logo already present)*
 
-Without customisation, the standard OiRA logo is displayed on the sidebar of the client. But you may also upload your sector's own logo:
+Without customisation, the standard OiRA logo is displayed on the sidebar of the client. But you may also upload your sector's own logo.
 
 
 Under *Logo* you check the box *My own*, then click on *Choose file* to navigate on your computer for selecting the image to upload. Finally, click on *Save* at the bottom of the page. You can change the image at a later date if needed, or switch back to the standard logo.
@@ -1250,6 +1308,7 @@ For best results, take a transparent 'PNG' file with a height of at least 110 pi
 
 .. figure:: images/editor/editor_17_logo_upload.png
     :align: center
+    :height: 150px
     :alt: Changing the sector logo
 
     *Changing the sector logo*
@@ -1268,6 +1327,7 @@ you can preview your OiRA tool (prior to making it public) following these steps
 
    .. figure:: images/editor/editor_versions_drawer.png
       :align: center
+      :height: 500px
       :alt: The versions drawer
 
       *The versions drawer*
@@ -1276,15 +1336,13 @@ you can preview your OiRA tool (prior to making it public) following these steps
 
    .. figure:: images/editor/editor_preview_confirmation.png
       :align: center
+      :height: 250px
       :alt: The preview confirmation form
 
       *The preview confirmation form*
 
 #. Click on the Preview URL
 
-   .. figure:: images/editor/editor_preview_status_message.png
-      :align: center
-      :alt: The preview confirmation form
 
 #. Log into the tool with your end-user account
 #. View your (still unpublished) OiRA tool
