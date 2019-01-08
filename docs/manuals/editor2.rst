@@ -268,6 +268,8 @@ Text fields and metadata
     Write the NACE-code of your sector.
 
 
+.. _enable-measures-in-place:
+
 Fields that allow special behaviour
 -----------------------------------
 
@@ -280,9 +282,10 @@ Fields that allow special behaviour
 
     While the type of tool can be changed at any time, it is important to be aware of the effects this has. Special care needs to be taken that the risk statements match the type of the tool.
 
-    **If you are unsure what option to take, chose the *Classic* version.**
+    **If you are unsure what option to take, chose the “Classic” version.**
 
-    For more details on this alternative tool type, see the chapter "XXXX OiRA tool with measures already in place" (t.b.d.)
+    For more details on this alternative tool type, see the chapter :ref:`OiRA tool with measures already in place <measures-in-place>`.
+
 
 .. _custom-notification:
 
@@ -434,6 +437,7 @@ The formatting bar offers the following options:
 
     .. figure:: images/editor/editor_8_place_a_link.png
       :align: center
+      :height: 300px
       :alt: Adding a hyperlink to formatted text
 
       *Adding a hyperlink to formatted text*
@@ -458,7 +462,10 @@ The formatting bar offers the following options:
 
     .. figure:: images/editor/editor_8a_edit_a_link.png
       :align: center
+      :height: 300px
       :alt: Adding a hyperlink to formatted text
+
+      *Adding a hyperlink to formatted text*
 
     .. note::
 
@@ -573,6 +580,7 @@ want to move it (click in the desired OiRA tool and folder) and choose
 
     .. figure:: images/editor/editor_paste_item.png
       :align: center
+      :height: 250px
       :alt: Cutting and Pasting items is done from the Actions menu
 
       *Cutting and Pasting items is done from the Actions menu*
@@ -589,6 +597,7 @@ To get an overview of what the library contains, you can use the link on the sta
 
     .. figure:: images/editor/editor_library_link.png
       :align: center
+      :height: 300px
       :alt: The link to the library on the start page of the CMS
 
       *The link to the library on the start page of the CMS*
@@ -597,6 +606,7 @@ The purpose of the library however is to provide easy access for copying relevan
 
     .. figure:: images/editor/editor_library_use.png
       :align: center
+      :height: 250px
       :alt: Access to the library inside an OiRA tool - here on the top level of a tool
 
       *Access to the library inside an OiRA tool - here on the top level of a tool*
@@ -605,6 +615,7 @@ After clicking this button, you will see the contents of the library ready for y
 
     .. figure:: images/editor/editor_library_select_source.png
       :align: center
+      :height: 500px
       :alt: The library contents, ready to be inserted into your tool
 
       *The library contents, ready to be inserted into your tool*
@@ -613,6 +624,7 @@ The selector lets you access all tools that are available in the library.
 
     .. figure:: images/editor/editor_library_selection.png
       :align: center
+      :height: 250px
       :alt: The selector of tools inside the library
 
       *The selector to switch between tools inside the library*
@@ -1037,6 +1049,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_14_risk_evaluation_estimated.png
                     :align: center
+                    :height: 300px
                     :alt: When choosing “Estimated” as the evaluation method, you also need to set a default priority.
 
                     *When choosing “Estimated” as the evaluation method, you also need to set a default priority.*
@@ -1076,6 +1089,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_13_evaluation_risk.png
                     :align: center
+                    :height: 400px
                     :alt: When choosing “Calculated” as the evaluation method, you may also set the default values for the calculation parameters.
 
                     *When choosing “Calculated” as the evaluation method, you may also set the default values for the calculation parameters.*
@@ -1086,7 +1100,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_skip_evaluation.png
                     :align: center
-                    :height: 300px
+                    :height: 250px
                     :alt: When choosing to let the user skip the evaluation, you need to set the priority yourself.
 
                     *When choosing to let the user skip the evaluation, you need to set the priority yourself.*
@@ -1097,6 +1111,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_risk_always_present.png
                     :align: center
+                    :height: 250px
                     :alt: An info-bubble informs about the consequences of selecting this option.
 
                     *An info-bubble informs about the consequences of selecting this option.*
@@ -1120,6 +1135,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
     .. figure:: images/editor/add_risk_images.png
         :align: center
+        :height: 250px
         :alt: The section on the risk edit form for adding images
 
         *The The section on the risk edit form for adding images*
@@ -1143,6 +1159,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
     .. figure:: images/editor/add_risk_additional_content.png
         :align: center
+        :height: 250px
         :alt: The section on the risk edit form for adding additional content
 
         *The section on the risk edit form for adding additional content*
@@ -1202,25 +1219,20 @@ solutions to general problem areas (by module) or measures for addressing specif
 Solutions - at module level
 ---------------------------
 
-Edit the module and add the text in the "Solution" field. This text should contain
-an approach for the user on how to tackle the risks described in that module in a general way. This
-information will be displayed in the Action plan before each specific risk is handled.
+Edit the module and add the text in the “Solution” field. This text should contain an approach for the user on how to tackle the risks described in that module in a general way. This information will be displayed in the Action Plan on the module level before the specific risks of that module are handled.
+
+.. _measures-risk-level:
 
 Measures - at risk level
 ------------------------
 
-It is most comfortable for the end-user if you provide a measure for each risk, because
-then the user will be able to pick measures with a click to pre-populate the
-action plan form.
+It is most comfortable for the end-user if you provide one or more measures for each risk, because then the user will be able to pick measures with a click to pre-populate the action plan form.
 
-A measure is related to a concrete risk. First select the
-risk in and then click on *Add Measure* in the grey bar.
-
-You will then see the following form:
+A measure is related to a concrete risk. On a risk, click on *Add Measure* in the grey bar to open the Add / Edit form.
 
     .. figure:: images/editor/editor_15_add_measure.png
         :align: center
-        :height: 350px
+        :height: 450px
         :alt: The “Add Measure” form
 
         *The “Add Measure” form*
@@ -1268,13 +1280,27 @@ You will then see the following form:
     For example: budgeting, training for Prevention/Safety staff, incorporating
     this subject in team meetings, etc.
 
-If the end-user selects this measure it will be copied over to the Action plan.
-The end-users can rework and modify the supplied text.
+If the end-user selects this measure it will be copied over to the Action plan. The end-users can rework and modify the supplied text.
+
+    .. figure:: images/editor/cms-select-measure.png
+        :align: center
+        :height: 300px
+        :alt: OiRA client: the pre-defined measures are available as pre-fill
+
+        *OiRA client: the pre-defined measures are available as pre-fill*
+
+
+    .. figure:: images/editor/cms-prefilled-measure.png
+        :align: center
+        :height: 350px
+        :alt: OiRA client: the text fields of the measure have been filled with the pre-defined statements
+
+        *OiRA client: the text fields of the measure have been filled with the pre-defined statements*
 
 Once finished, click *Save changes* at the bottom of the page.
 
-It is recommended to add several standard measures to each risk.
-You can add them by clicking the *Add Measure* button.
+**Important**: If your OiRA tool allows the user to define :ref:`measures that are already implemented <measures-in-place>`, then all the measures that you define here will be available for selection already in the Identification phase.
+
 
 ====================================================
 Customizing OiRA to reflect your organisation's logo
@@ -1305,13 +1331,6 @@ Without customisation, the standard OiRA logo is displayed on the sidebar of the
 Under *Logo* you check the box *My own*, then click on *Choose file* to navigate on your computer for selecting the image to upload. Finally, click on *Save* at the bottom of the page. You can change the image at a later date if needed, or switch back to the standard logo.
 
 For best results, take a transparent 'PNG' file with a height of at least 110 pixels. Larger logos will be resized automatically.
-
-.. figure:: images/editor/editor_17_logo_upload.png
-    :align: center
-    :height: 150px
-    :alt: Changing the sector logo
-
-    *Changing the sector logo*
 
 
 
@@ -1398,6 +1417,59 @@ publish the tool. This way EU-OSHA can ensure that your tool will be included
 on the OiRA project site (http://www.oiraproject.eu). You don't have to notify
 the OiRA team when you have updated the OiRA tool.
 
+.. _measures-in-place:
+
+===================================================
+Special OiRA tool with already implemented measures
+===================================================
+
+The standard structure of a risk assessment in OiRA for the user looks as follows:
+
+* A positive statement is presented that describes a desired state, such as “Regular maintenance is performed”.
+* The user can either confirm this with a Yes (no risk present) or decline with a No, meaning that the desired stated is not (yet) present.
+* In this case, the OiRA tools knows that this risk is present at the user's organisation. Therefore, the user needs to handle this risk in the Action Plan, and plan measures to mitigate this risk **in the future**.
+
+In other words, OiRA assumes by its structure that a user always starts a risk assessment from scratch: OiRA helps the user to identify a risk, and then plan preventive measures.
+
+In reality, many organisations might already have given thought to their situation regarding safety and health at work. For at least some of the risks that affect a workplace, preventive measures might **already be in place**. Example: A hazardous area has been fenced off, a warning sign has been placed, personal protective gear is being used, ...
+
+In a standard OiRA tool, the user can only plan for measures that are still required. But it might be desirable to also document the measures that have already been implemented, for example in a report that documents the overall state of the risk assessment and prevention.
+
+Therefore, an OiRA tool can be switched from the ”Classic” (i.e. standard) variant to a type that enables the user to define measures that have already been implemented. See the :ref:`chapter about editing an OiRA tool <enable-measures-in-place>` on how to switch the type of tool.
+
+.. figure:: images/editor/cms-measures-in-place.png
+    :align: center
+    :height: 300px
+    :alt: OiRA client: risk statement, with suggested measures shown to the user that they can mark as already being implemented
+
+    *OiRA client: risk statement, with suggested measures shown to the user that they can mark as already being implemented*
+
+
+This will have the following effect in the OiRA application for the end-user:
+
+* On each risk in the identification phase, an additional instruction will be displayed after the risk statement: “Select or add any measures that are already in place”.
+* All measures that were :ref:`defined by the tool creator for this risk <measures-risk-level>` are shown as selectable items to the user.
+* Apart from selecting (= confirming) the appropriate items, the user can also add additional measures that have been implemented in their organisation to tackle this risk.
+* The actual identification is pre-fixed with a **question**: “Are the measures that are selected above sufficient?”, to make it clear that the assessment of the risk needs to consider the concrete situation in the user's organisation. The Yes / No answer does not relate to the risk statement.
+* The **answers** below have the same effect as in a classic OiRA tool: “Yes (the remaining risk is acceptable)” means that the risk is under control and will not appear in the Action Plan. “No (more measures are required)” means that the risk will be added to the Action Plan so that further measures can be planned.
+
+.. figure:: images/editor/cms-measures-in-place-custom.png
+    :align: center
+    :height: 250px
+    :alt: OiRA client: the user has selected one pre-defined measure and written text for an additional custom measure.
+
+    *OiRA client: the user has selected one pre-defined measure and written text for an additional custom measure.*
+
+
+In the Action Plan, all measures that have already been implemented are shown for information. Since there is no action required for them, they cannot be edited or scheduled. But new measures (to be implemented in the future) can still be added just as with a classic OiRA tool.
+
+.. figure:: images/editor/cms-measures-in-place-action-plan.png
+    :align: center
+    :height: 450px
+    :alt: OiRA client: the action plan page for a risk showing two measures that are already in place above the form to add new measures.
+
+    *OiRA client: the action plan page for a risk showing two measures that are already in place above the form to add new measures.*
+
 ================================
 Re-working a published OiRA tool
 ================================
@@ -1476,6 +1548,7 @@ But you want to prevent new users from starting a new session of the old version
 
 .. figure:: images/editor/client_list_of_tools.png
     :align: center
+    :height: 300px
     :alt: List of available tools shown to the user
 
     *List of available tools shown to the user*
