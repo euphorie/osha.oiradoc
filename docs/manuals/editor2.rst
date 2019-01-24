@@ -44,7 +44,9 @@ There are two types of Login Accounts in OiRA:
 
 In both cases, EU-OSHA needs to create the account first, if it is not already present because it is used for other OSHA sites such as the OiRA community site or the OSHWiki. Once your account has been created you will receive an email, at the provided address, containing the login information. Please note: Both your user name and password are case sensitive!
 
-Country managers can create sectors by clicking the tab “User management” and then *Add new sector*
+Country managers can create sectors by clicking the tab “User management” and then *Add new sector*.
+
+When creating a new sector, be aware that the name of the sector will show up in the URL of the final published tool. Once this URL is created, the tool published and the first users have registered, it’s complicated to change to a new URL. Therefore carefully consider the name you give to that sector and make sure the naming follows the same rules for each sector in your country.
 
 .. figure:: images/editor/editor_add_sector.png
     :align: center
@@ -75,6 +77,10 @@ In similar fashion, any user can be made a Country Manager via the “LDAP” ta
     *A site administrator can grant and revoke the Country Manager role*
 
 
+.. note::
+
+    **LDAP** is a user Management data base set up by EU-OSHA. The LDAP allows users to use the same login for different EU-OSHA pages (e.g. EU-OSHA website, OiRA website, OSHwiki and OiRA content management system). In order to get access to any page linked to LDAP you must first register the respective person in the LDAP by sending the name and email address to the OiRA team. Please take into account that the registration process might take a few days.
+
 
 ----------
 Logging in
@@ -87,7 +93,7 @@ You start on: https://admin.oiraproject.eu
     :height: 300px
     :alt: The OiRA tools generator login form
 
-    *The OiRA CMS login form*
+    *The OiRA Content Management System (CMS) login form*
 
 Log in with your User Name and Password.
 Did you forget your password? Click at the
@@ -101,8 +107,7 @@ Then add your user name and click on 'Send'.
 
       *The OiRA CMS password reset form*
 
-You will be redirected back to the login page and a green bar will appear,
-confirming that the password will be sent to the email address you provided.
+You will be redirected back to the login page and a green bar will appear, confirming that an email has been sent to the address that you have provided. This email will contain a link that lets you reset the password.
 
    .. figure:: images/editor/editor_3_password_reset_confirmation.png
       :align: center
@@ -138,7 +143,9 @@ screen where you will see the notification 'You have been logged out'.
 Setting up a new OiRA tool
 ==========================
 
-A new OiRA tool is created in two steps. First, you define the basic information such as the name of the tool and which kind of evaluation method should be used. These settings will stay fixed and cannot be changed later. In the second step, you provide more details about the tool, such as introductory text, information about its language and further options. You will be able to modify those settings at any time.
+A new OiRA tool is created in two steps. First, you define the basic information such as the name of the tool and which kind of evaluation method should be used. Please note that as for the sector, the name of the tool shows up in the final URL and cannot be changed by you later. The evaluation method determines what kind of questions the end-user will see to evaluate a risk. It can only be set during creation and cannot be changed later.
+
+In the second step, you provide more details about the tool, such as introductory text, information about its language and further options. You will be able to modify those settings at any time.
 
 .. _create-oira-tool:
 
@@ -146,7 +153,7 @@ A new OiRA tool is created in two steps. First, you define the basic information
 Adding a new OiRA tool
 ----------------------
 
-On the overview page of a sector, either click the link “add a new OiRA tool” at the bottom of the screen, or use the *Actions* menu at the top right to “Add new -> OiRA tool”.
+On the overview page of the chosen sector, either click the link “add a new OiRA tool” at the bottom of the screen, or use the *Actions* menu at the top right to “Add new -> OiRA tool”.
 
 .. figure:: images/editor/editor_add_oira_tool.png
     :align: center
@@ -163,18 +170,26 @@ You will then be brought to the form below:
 
     *The “new OiRA tool” form*
 
+Give the OiRA tool a name (title). This name will be shown to the end-user in the overview. Example: Hairdressers Risk Assessment Tool 2010.
+
+  .. note ::
+
+     It is not possible to change this name later on, since it will be used to create the URL for this tool in the client. In case a change of the tool's name (title) is necessary, please contact EU-OSHA for assistance.
+
 When creating a new OiRA tool you can choose from the following three options:
 
 #. **Create a new OiRA tool from scratch**
-    This option is recommended when you already have an existing risk-assessment tool and would like to transfer this to OiRA.
+    This option is recommended when you already have an existing risk-assessment tool from outside of OiRA and would like to transfer this / add the contents to OiRA.
 
 #. **Base my OiRA tool on an existing OiRA tool of my organisation**
-    This option is recommended when you are planning to revise the contents of your OiRA tool.
+    This option is recommended when you are planning to revise the contents one of your already published OiRA tools.
 
     .. note::
 
-        When dealing with minor amendments, e.g. typos, it would be best to
-        implement these in the existing OiRA tool and simply republish it.
+        When dealing with minor amendments, e.g. typos, it would be best to implement these in the existing OiRA tool and simply republish it.
+
+        **Important**: When dealing with bigger changes on an already published OiRA tool (including moving modules, risk statements or solutions/measures), please check the :ref:`chapter about the re-working a published OiRA tool <reworking-oira-tool>`.
+
 
 #. **Base my OiRA tool on an existing OiRA tool of another organisation**
     You can decide which existing OiRA tool is most suitable for your sector. You can copy and modify it, and thus avoid having to create one from scratch. You have to determine the amendments for your own sector. For example, the butcher could copy and modify the OiRA tool of the fish retailer.
@@ -183,17 +198,14 @@ When creating a new OiRA tool you can choose from the following three options:
 
     .. note ::
 
-        After you've copied an existing OiRA tool, any changes made to the 'source' OiRA tool will not automatically be reflected in your own OiRA tool. When, for example, the butcher has copied the OiRA tool of the fish retailer and the fish retailer implements changes in their OiRA tool afterwards, these changes will not appear in the OiRA tool of the butcher.
+        The OiRA philosophy is based on open source, which means that you have the right to copy text from any other published OiRA tool and also from the OiRA library. However, be aware that this is not applicable to pictures used by other OiRA partners! You will always have to check the rights for these pictures before including them in your tool.
+
+        After you have copied an existing OiRA tool, any changes made to the 'source' OiRA tool will not automatically be reflected in your own OiRA tool. When, for example, the butcher has copied the OiRA tool of the fish retailer and the fish retailer implements changes in their OiRA tool afterwards, these changes will not appear in the OiRA tool of the butcher.
 
     If you would like to copy the OiRA tool of another sector as a starting point, you need to first select the country in the drop-down menu and subsequently the sector of your choice.
 
     If this sector provides more than one version, you will see all versions listed, so that you can chose the appropriate one.
 
-Give the OiRA tool a name (title). This name will be shown to the end-user in the overview. Example: Hairdressers Risk Assessment Tool 2010.
-
-  .. note ::
-
-     It is not possible to change this name later on, since it will be used to create the URL for this tool in the client. In case a change of the tool's name (title) is necessary, please contact EU-OSHA for assistance.
 
 Then click on “Create” at the bottom of the page. Please note that setting up a new OiRA tool can take a while if you've chosen to copy from an existing OiRA tool.
 
@@ -241,7 +253,7 @@ Text fields and metadata
     its first version is automatically created and given the name *Standard*.
 
 * **Summary**:
-    A short description of the contents of the OiRA tool. This text will be displayed to then end user.
+    A short description of the contents of the OiRA tool. This text will be displayed to the end user.
 
 * **Introduction text**:
     Please provide some relevant and encouraging information for end-users of the OiRA tool. For example:
@@ -307,7 +319,11 @@ Fields that allow special behaviour
     * **Tool notification message**
         Enter the text that should be shown. You can use the usual formatting in the message, e.g. paragraphs, lists and bold text. You can also include links, so that you can provide a link to a new version of the tool or similar.
 
-    If the custom notification was activated, the end-user will see it in form of a pop-up when they open the tool in the client:
+    If the custom notification was activated, the end-user will see it in form of a pop-up when they open the tool in the client.
+
+    .. note::
+
+        The custom notification will only show up to end users once a day (the first time every day they login to the tool).
 
     .. figure:: images/editor/custom_message_client.png
       :align: center
@@ -316,18 +332,22 @@ Fields that allow special behaviour
       *The notification that the user gets to see*
 
 
+.. _custom-tool-logo:
+
 * **Include a logo which links to an external website**: (Optional)
     Your sector might already have chosen a logo that will appear in the bottom
-    left corner of the OiRA risk assessment application.
+    left corner of the OiRA risk assessment application. This is explained in :ref:`custom-sector-logo`.
 
-    This logo can be clicked and links to the homepage of the OiRA risk
-    assessment site (https://client.oiraproject.eu).
+    That logo can be clicked and links to the homepage of the OiRA risk
+    assessment site (https://oiraproject.eu/oira-tools/eu).
 
     There is another option to include a logo which links
-    back to a selected web page. This logo will appear on the first page that
+    back to a selected web page. This logo will appear on the first page of the specific tool that
     end-users visit as soon as they start with a risk assessment (the Preparation step).
 
     If you tick the checkbox "Include a logo which links to an external website", 3 more fields will appear.
+
+    This option is meant to have the possibility to point out the national contributors, sectoral social partners, funding parties etc.
 
     .. figure:: images/editor/editor_client_example_logos.png
       :align: center
@@ -515,14 +535,14 @@ When you :ref:`create a new OiRA tool <create-oira-tool>`, the first version is 
 
       *The new OiRA tool together with its first version*
 
-Having multiple versions is a very useful feature for a variety of reasons.
+Having a second version of your tool is a very useful feature for a variety of reasons.
 
-* Whenever you need to make risky or invasive changes to your OiRA tool, you can create a new version to experiment with, while having the peace of mind that there is still a fully functional copy of the currently deployed OiRA tool.
+* Whenever you need to make risky or invasive changes to your OiRA tool, you can create a new version to experiment with, while having the peace of mind that there is still a fully functional copy of the currently published OiRA tool.
 * Having different versions, together with the preview function, allows easy and rapid prototyping without affecting the OiRA tool currently available to the end-users.
 * Once you have tested a new version, you can publish that specific version, thereby replacing the previous one.
 * Older versions can be kept for documentation purposes, indicating the history and eventual changes brought to the OiRA tool.
 
-Updating an existing OiRA tool version usually requires you to only do minimal changes to adapt it to latest amendments in legislation or new findings. In this case you don't want to create a new OiRA tool version from scratch but instead copy the old one and make amendments.
+Updating an existing OiRA tool version usually requires you to only do minimal changes to adapt it to latest amendments in legislation or new findings. In this case you don't need to create a new OiRA tool version; instead you can apply those small changes directly to the OiRA tool and publish it again.
 
 **Steps for creating a new OiRA tool version:**
 
@@ -552,6 +572,19 @@ Updating an existing OiRA tool version usually requires you to only do minimal c
 
 Now you have a second OiRA tool version available and on which you can make changes that won't affect the original version. Once you are done, you can publish it and it will replace the existing OiRA tool in the client.
 
+Colours used on the right hand menu:
+
+* The tool shown in yellow on the right hand menu is the tool version you are working on, and tools shown in blue on the right hand menu are tools that are published.
+
+* A tool shown in yellow and blue stripes is the published tool that you are currently working on.
+
+
+   .. figure:: images/editor/editor_versions_legend.png
+      :align: center
+      :height: 400px
+      :alt: The tools and their versions, with colour coding to indicate their status
+
+      *The tools and their versions, with colour coding to indicate their status*
 
 
 ======================================
@@ -562,19 +595,16 @@ When completing/modifying the content it is essential to first consider the stru
 
 With structure, we refer to the layout of *profile questions*, *modules* and *submodules*, as well as their contained *risks* and *measures*.
 
-Within a *module* or *profile question*, you can either add *submodules* or *risks*; a combination of both isn't possible. You can however add *risks* to a *submodule*.
+Within a *module* or *profile question*, you can either add *submodules* or *risks*; a combination of both isn't possible.
 
 ----------------------------------------------
 Copying or moving elements inside an OiRA tool
 ----------------------------------------------
 
-When you base the OiRA tool on an existing OiRA tool, it will already have a
-structure. Main modules and submodules may be added to, or removed from any part of
-this structure. You can also copy and move modules, both within the OiRA tool
-and to other OiRA tools under your management (visible on the overview on the left).
+When you base the OiRA tool on an existing OiRA tool, it will already have a structure. Main modules and submodules may be added to, or removed from any part of this structure. You can also copy modules from any OiRA tool (your own or others) and paste into OiRA tools under your management (visible on the overview on the left). Additionally you can move modules from your tools (cut and paste) to another version of your tool.
 
 Click on the item which you would like to copy or move, and open the menu
-*Actions* (top right, next to *Edit*). Choose the desired option (Copy or, go to the area where you
+*Actions* (top right, next to *Edit*). Choose the desired option (*Copy* or *Cut*, go to the area where you
 want to move it (click in the desired OiRA tool and folder) and choose
 *Paste* from the *Actions* menu.
 
@@ -591,9 +621,13 @@ want to move it (click in the desired OiRA tool and folder) and choose
 Using the Library to copy useful content
 ----------------------------------------
 
-Even though sectors and legislation differ across states, a lot of problems and risks are common, as are the proposed solutions. For this reason, EU-OSHA provides a library of risk assessment modules that can be re-used by all tool creators.
+Even though sectors and legislation differ across states, a lot of problems and risks are common, as are the proposed solutions. For this reason, EU-OSHA provides a library of risk assessment modules that can be re-used by all tool creators. The library items usually do not contain legislative information.
 
-To get an overview of what the library contains, you can use the link on the start page of the CMS and browse the contents.
+.. note::
+
+  Library tools are normally either English translations from national tools that have been published or they are standard modules developed by EU-OSHA. Please note that library tools need national adaptation, in terms of language, legislation and critical revision of all items that are going to be copied.
+
+To get an overview of what the library contains, you can use the link on the start page of the CMS and browse the contents (https://admin.oiraproject.eu/tool-creator/sectors/eu/library).
 
     .. figure:: images/editor/editor_library_link.png
       :align: center
@@ -723,6 +757,13 @@ You can create profile questions as follows: click on the top level of the OiRA 
 (top link in the navigation tree on the left-hand side) and in the grey
 bar underneath the title you will find the button *Add Profile Question*.
 
+    .. figure:: images/editor/add_profile_question.png
+      :align: center
+      :height: 75px
+      :alt: Button for adding a profile question
+
+      *Button for adding a profile question*
+
 You will see the following page:
 
 .. figure:: images/editor/editor_10_profile_question.png
@@ -735,8 +776,7 @@ You will see the following page:
 The following fields are available:
 
     * **Title**:
-        The title will appear prominently above the profile question,
-        in the beginning of the OiRA tool, during the **Preparation** phase of the risk assessment, and also inside the navigation of the tool.
+        In the client, the title will appear prominently above the profile question. The end-user will see it in the beginning of the OiRA tool, during the **Preparation** phase of the risk assessment, and also inside the navigation of the tool.
 
         Don't put a full-stop after the title. A number isn't needed, either.
 
@@ -753,34 +793,34 @@ The following fields are available:
     * **Ask the user about (multiple) locations?**
         If this setting is enabled, the user will be asked to provide a label for each location / instance that will be checked against the contents of this profile. Using this settings makes the profile repeatable.
 
-    * **Multiple item question**:
-        This question will be posed to the user only if they have answered *Yes* to
-        the preceding question, and must be designed to determine whether the
-        profile question contents needs to be repeated or not.
+        * **Multiple item question**:
+            This question will be posed to the user only if they have answered *Yes* to
+            the preceding question, and must be designed to determine whether the
+            profile question contents needs to be repeated or not.
 
-        For example:
+            For example:
 
-            *Do you offer this service in multiple locations?*
+                *Do you offer this service in multiple locations?*
 
-    * **Single occurrence prompt**:
-        This is the question that will be posed to the user if they have
-        answered *No* to the previous question, i.e. there is only one instance
-        or occurrence. It must prompt the user to provide a name for that
-        single instance/occurrence.
+        * **Single occurrence prompt**:
+            This is the question that will be posed to the user if they have
+            answered *No* to the previous question, i.e. there is only one instance
+            or occurrence. It must prompt the user to provide a name for that
+            single instance/occurrence.
 
-        For example:
+            For example:
 
-            *Please enter the name for the location you want to assess*
+                *Please enter the name for the location you want to assess*
 
-    * **Multiple occurrence prompt**:
-        This is the question that will be posed to the user if they have
-        answered *Yes* to the *Multiple item question*, i.e. there is more than
-        one instance or occurrence. It must prompt the user to provide a name
-        for each instance/occurrence.
+        * **Multiple occurrence prompt**:
+            This is the question that will be posed to the user if they have
+            answered *Yes* to the *Multiple item question*, i.e. there is more than
+            one instance or occurrence. It must prompt the user to provide a name
+            for each instance/occurrence.
 
-        For example:
+            For example:
 
-            *Please enter the name for each location you want to assess*
+                *Please enter the name for each location you want to assess*
 
 
 A profile question acts as a module, in the sense that it is a container. You can now add modules and/or risks to it. Do that by clicking the "Add Module" or the "Add Risk" button.
@@ -796,11 +836,88 @@ A profile question acts as a module, in the sense that it is a container. You ca
 Modules
 =======
 
-When the module structure is clear and the decision has been made whether
-profile questions will be posed or not, it is a good idea to first completely
-build the module structure into the OiRA tools generator. Only after that should you
-add the risks to the modules. It is not useful to start adding
-risks to modules when the structure has not yet been determined.
+When the module structure is clear and the decision has been made whether profile questions will be posed or not, it is a good idea to first completely build the module structure into the OiRA tools generator. Only after that should you add the risks to the modules. This enables you to get a good overview of your structure before starting to deal with the more detailed aspects related to the risk statements.
+
+
+---------------
+Adding a module
+---------------
+
+When you are on an OiRA tool, or inside a profile question, or inside a module that does not contain any risks, you can create a new module by clicking the *Add Module* button, as shown in the screen-shot below.
+
+.. figure:: images/editor/editor_9_creating_modules.png
+    :align: center
+    :alt: The location of the *Add Module* button
+
+    *The location of the “Add Module” button*
+
+You will the see the following form:
+
+.. figure:: images/editor/editor_11_add_module.png
+    :align: center
+    :height: 700px
+    :alt:  The *Add Module* form
+
+    *The Add Module form*
+
+The following fields are shown:
+
+   **Title**:
+        The title of this module, for instance *Storage room*,
+        *Working at height* or *Physical Work*, etc. The end-user will see this
+        title at the top of the page for the duration of answering this
+        module's risks. Don't put a full stop after the title. A number
+        isn't needed either, since the module will be numbered automatically.
+        Keep it short and simple. Use everyday language and make sure the end-user
+        will immediately understand it.
+
+   **Description**:
+        Provide a short general description of the contents
+        of the module. This is a `formatted text`_ field, so you can create links
+        to useful external pages providing additional relevant information.
+
+   **This module is optional**:
+        Please refer to the explanation on `optional modules`_ below.
+
+        Ticking this box will make the module optional, determined by the
+        answer to a 'filter question' posed to the user.
+
+
+   **Image file**:
+        You can add an image that will be shown along with the module's title and description. Please use a JPEG, PNG or GIF file and make sure that the image is of high quality and is not scaled down. Large images will automatically be scaled to the correct size.
+
+   **Solution overview**:
+        At the modular level, generic/orienting solutions could be provided.
+        For example it could be important to stress the importance
+        of avoiding the risk, substituting the dangerous by the non-(or less)
+        dangerous, combating risk at source. The solution could focus
+        on different aspects: technical and/or organisational, ...
+
+        The text you enter here will appear in the **Action Plan** phase.
+        This Overview of solution at module level should be compatible/complementary
+        with the measure(s) proposed at risk level.
+
+    **Additional content**
+        You can upload up to four files that might supplement the contents of the module or aid the end-user in their risk assessment. These files will be shown on the module in the client to the end-user. If you do not provide a content caption, then the original file name (as it is named on your computer / device) will be shown to the user:
+
+        .. figure:: images/editor/module_additional_content.png
+            :align: center
+            :height: 250px
+            :alt:  “Additional content” files shown on a module
+
+            *“Additional content” files shown on a module*
+
+
+
+Once you have filled in the forms, click *Save* at the bottom of the screen.
+
+To add more top-level modules, click again on the top link in the navigation tree on the left and then click the button *Add Module*.
+
+To add a submodule to the current module, click on the module where you want to add the submodule. Then click *Add Submodule* on the top bar.
+
+You can modify modules and submodules as well as all other information you enter at a later stage by clicking the *Edit* button.
+
+With the Action menu (top right) you can cut, copy and delete modules and by dragging them (up or down) you can change order of appearance. You should do this before publishing the OiRA tool.
 
 ----------------
 Optional modules
@@ -837,99 +954,22 @@ first question (as affirmative statement) that is displayed in the module.
 
 It is useful to start determining which modules could or should start with
 a filter question during the preparation of the module structure.
-See below for information on how to enter an optional module.
+See above for information on how to enter an optional module.
 
----------------
-Adding a module
----------------
+If you have decided to make the module optional by ticking the box “This module is optional”, an extra field labeled *Question* will appear, in which you must write the ‘filter question’ as an affirmative statement.
 
-When you are on an OiRA tool, or inside a profile question, or inside a module that does not contain any risks, you can create a new module by clicking the *Add Module* button, as shown in the screen-shot below.
-
-.. figure:: images/editor/editor_9_creating_modules.png
+.. figure:: images/editor/editor_optional_module.png
     :align: center
-    :alt: The location of the *Add Module* button
+    :alt:  Making a module optional
 
-    *The location of the “Add Module” button*
+    *Making a module optional*
 
-You will the see the following form:
+The answer has to be *Yes* or *No*. If *No* is answered, the end-user will skip the module.
 
-.. figure:: images/editor/editor_11_add_module.png
-    :align: center
-    :height: 700px
-    :alt:  The *Add Module* form
+..  note::
 
-    *The Add Module form*
+  Optional modules give the possibility to the end users to adapt the content of the tool to their needs while going through the tool / its modules. Profile questions give the possibility to the end user to adapt the tool to their needs at the *beginning* of the risk assessment process, directly after logging in to the tool. Also profile questions can be used in a more complex way to have modules repeated (e.g. to get the same questions again for different locations).
 
-with the following fields:
-
-   **Title**:
-        The title of this module, for instance *Storage room*,
-        *Working at height* or *Physical Work*, etc. The end-user will see this
-        title at the top of the page for the duration of answering this
-        module's risks. Don't put a full stop after the title. A number
-        isn't needed either, since the module will be numbered automatically.
-        Keep it short and simple. Use everyday language and make sure the end-user
-        will immediately understand it.
-
-   **Description**:
-        Provide a short general description of the contents
-        of the module. This is a `formatted text`_ field, so you can create links
-        to useful external pages providing additional relevant information.
-
-   **This module is optional**:
-        Please refer to the explanation on `optional modules`_ above.
-
-        Ticking this box will make the module optional, determined by the
-        answer to a 'filter question' posed to the user.
-
-        If you have decided to make the module optional by ticking this box,
-        an extra field labelled *Question* will appear, in
-        which you must write the 'filter question' as an affirmative statement
-
-        .. figure:: images/editor/editor_optional_module.png
-            :align: center
-            :alt:  Making a module optional
-
-            *Making a module optional*
-
-        The answer has to be *Yes* or *No*. If *No* is answered,
-        the end-user will skip the module (as explained above).
-
-   **Image file**:
-        You can add an image that will be shown along with the module's title and description. Please use a JPEG, PNG or GIF file and make sure that the image is of high quality and is not scaled down. Large images will automatically be scaled to the correct size.
-
-   **Solution overview**:
-        At the modular level, generic/orienting solutions could be provided.
-        For example it could be important to stress the importance
-        of avoiding the risk, substituting the dangerous by the non-(or less)
-        dangerous, combating risk at source. The solution could focus
-        on different aspects: technical and/or organisational, ...
-
-        The text you enter here will appear in the **Action Plan** phase.
-        This Overview of solution at module level should be compatible/complementary
-        with the measure(s) proposed at risk level.
-
-    **Additonal content**
-        You can upload up to four files that might supplement the contents of the module or aid the end-user in their risk assessment. These files will be shown on the module in the client. If you do not provide a content caption, then the file name will be shown to the user:
-
-        .. figure:: images/editor/module_additional_content.png
-            :align: center
-            :height: 250px
-            :alt:  “Additional content” files shown on a module
-
-            *“Additional content” files shown on a module*
-
-
-
-Once you have filled in the forms, click *Save* at the bottom of the screen.
-
-To add more top-level modules, click again on the top link in the navigation tree on the left and then click the button *Add Module*.
-
-To add a submodule to the current module, click on the module where you want to add the submodule. Then click *Add Submodule* on the top bar.
-
-You can modify modules and submodules as well as all other information you enter at a later stage by clicking the *Edit* button.
-
-With the Action menu (top right) you can cut, copy and delete modules and by dragging them (up or down) you can change order of appearance. You should do this before publishing the OiRA tool.
 
 =====
 Risks
@@ -944,7 +984,7 @@ Make sure you are in the correct context by selecting the module, submodule or p
 question from the left-side navigation.
 
 .. note::
-    You cannot add risks in the top level of the OiRA tool.
+    You cannot add risks in the top level of the OiRA tool. You need to create a module or profile question first.
 
 Once on the correct context in which you want to add the risk, click *Add Risk*
 in the grey bar underneath the title.
@@ -992,6 +1032,8 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
     For example:
         - *The floors are not free of obstacles.*
 
+        - *The floors might not always be free of obstacles.*
+
         - *It is not guaranteed that the floors are always free of obstacles.*
 
         - *It is possible that floors are sometimes occupied by obstacles.*
@@ -1014,7 +1056,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
         If ticked, the user will be presented the possibility to answer with *Not Applicable*.
         Otherwise they only have the options *Yes* or *No*.
 
-        This is useful for risks of which you can't predict whether they will be relevant to the end-user or not.
+        This is useful for risks of which you can't predict whether they will be relevant to all end-users or not.
 
 **Evaluation**:
 
@@ -1037,10 +1079,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
         be applicable anymore).
 
     #. **Risk**:
-        Refers to the existing risks at the workplace or linked to the work
-        carried out. To identify and evaluate such risks it is often necessary to
-        examine the workplace (to walk around the workplace and look at what could
-        cause harm; consult workers, etc.).
+        Refers to the existing risks at the workplace or linked to the work carried out. Should be used for standard risks/the majority of risks in your tool. To identify and evaluate such risks it is often necessary to examine the workplace (to walk around the workplace and look at what could cause harm; consult workers, etc.).
 
         For this "risk" type, the developer has to choose an evaluation method.
         The developer can choose from three options of evaluation methods:
@@ -1116,6 +1155,10 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                     *An info-bubble informs about the consequences of selecting this option.*
 
+        .. note::
+
+              To be able to choose the best evaluation method, you should liaise closely with the country manager and make sure the tool follows the country’s approach for risk evaluation. Also take into account the target group of micro and small enterprises and make sure the tool takes a simple and straight forward approach.
+
     #. **Policy**:
         Refers to agreements, procedures, management decisions regarding
         OSH issues. These issues can be answered behind a desk (no need to examine the
@@ -1177,6 +1220,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 Once you are done, click on *Save* (at the bottom of the page).
 
 
+-----------------
 Formulating risks
 -----------------
 
@@ -1239,14 +1283,9 @@ A measure is related to a concrete risk. On a risk, click on *Add Measure* in th
 
 **Description**:
 
-    This is the heading that will appear in a drop-down in the Action Plan
-    phase of the client; it is the first and only information the end-user
-    will see before actually selecting the measure, so it needs to be
-    informative.
-    Start with words which reflect the core message of the
-    measure, for example: *Information and instruction on personal protection measures*,
-    and then offer the rest. This text helps to get the end-user started
-    and explains the possibilities.
+    This is the heading that will appear in a drop-down in the Action Plan phase of the client; it is the first and only information the end-user will see before actually selecting the measure, so it needs to be informative, but as short as possible.
+
+    Start with words which reflect the core message of the measure, for example: *Information and instruction on personal protection measures*, and then offer the rest. This text helps to get the end-user started and explains the possibilities.
 
 **General approach** (to eliminate or reduce the risk):
     Describe what is your general approach to eliminate or (if the risk
@@ -1299,15 +1338,16 @@ If the end-user selects this measure it will be copied over to the Action plan. 
 
 Once finished, click *Save changes* at the bottom of the page.
 
-**Important**: If your OiRA tool allows the user to define :ref:`measures that are already implemented <measures-in-place>`, then all the measures that you define here will be available for selection already in the Identification phase.
+**Important**: If your OiRA tool allows the user to define measures that are already implemented, then all the measures that you define here will be available for selection already in the Identification phase. See the respective :ref:`chapter on this kind of OiRA tool <measures-in-place>`.
 
+
+.. _custom-sector-logo:
 
 ====================================================
 Customizing OiRA to reflect your organisation's logo
 ====================================================
 
-You may customize the way the OiRA risk assessment tool will appear to
-end-users to let it reflect your organisation's logo.
+You may customize the way the OiRA risk assessment tool will appear to end-users to let it reflect your organisation's logo.
 
 .. figure:: images/editor/editor_edit_sector_link.png
     :align: center
@@ -1327,10 +1367,11 @@ You will then see a form similar to the one shown in the image below.
 
 Without customisation, the standard OiRA logo is displayed on the sidebar of the client. But you may also upload your sector's own logo.
 
-
 Under *Logo* you check the box *My own*, then click on *Choose file* to navigate on your computer for selecting the image to upload. Finally, click on *Save* at the bottom of the page. You can change the image at a later date if needed, or switch back to the standard logo.
 
 For best results, take a transparent 'PNG' file with a height of at least 110 pixels. Larger logos will be resized automatically.
+
+Please also see :ref:`the section on a custom tool logo<custom-tool-logo>` for a screen-shot of how this will affect the client.
 
 
 
@@ -1341,8 +1382,12 @@ Checking your OiRA tool
 When all the work has been done, i.e. the structure and contents have been completed,
 you can preview your OiRA tool (prior to making it public) following these steps:
 
-#. Make sure you have an end-user account in the OiRA tool (https://oiraproject.eu/oira-tools/) You create an account in the OiRA client here https://oiraproject.eu/oira-tools/@@register
-#. In the *Versions drawer* (see `OiRA tool versions`_) on the right hand, chose the version you want to preview and, click the *Preview* link next to your OiRA tool version.
+#.
+  Make sure you have an end-user account in the OiRA tool (https://oiraproject.eu/oira-tools/) You create an account in the OiRA client here https://oiraproject.eu/oira-tools/@@register
+
+  You can also use the testing session, but you won’t be able to generate a report within a test session account.
+#.
+  In the *Versions drawer* (see `OiRA tool versions`_) on the right hand, chose the version you want to preview and, click the *Preview* link next to your OiRA tool version.
 
    .. figure:: images/editor/editor_versions_drawer.png
       :align: center
@@ -1380,17 +1425,19 @@ you can preview your OiRA tool (prior to making it public) following these steps
      The preview is stored in a separate place on the server, it won't be
      viewable to the end-users until you publish the OiRA tool.
 
-===============
-Ready? Publish!
-===============
+.. _publish-oira-tool:
 
-Once you've successfully completed all steps it's time to publish your
-OiRA tool.
+=======================
+Publishing an OiRA tool
+=======================
+
+Once you have successfully completed all steps, it is time to publish your OiRA tool.
 
 Go to the right hand menu, click on the version of the tool you want to publish and click on "Publish".
 
 .. figure:: images/editor/editor_18b_publish_survey.png
     :align: center
+    :height: 250px
     :alt: Publishing your OiRA tool
 
     *Publishing your OiRA tool*
@@ -1411,11 +1458,7 @@ A confirmation message will appear in a green bar:
 
     *Publish confirmation message*
 
-From now on, the public can view and complete your OiRA tool. In case of a
-new OiRA tool, contact the OiRA team at EU-OSHA at least two weeks before you
-publish the tool. This way EU-OSHA can ensure that your tool will be included
-on the OiRA project site (http://www.oiraproject.eu). You don't have to notify
-the OiRA team when you have updated the OiRA tool.
+From now on, the public can view and complete your OiRA tool. In case of a new OiRA tool, contact the OiRA team at EU-OSHA at least two weeks before you publish the tool. This way EU-OSHA can ensure that your tool will be included on the OiRA project site (http://www.oiraproject.eu). You don’t have to notify the OiRA team when you have done minor updates and published again the same OiRA tool.
 
 .. _measures-in-place:
 
@@ -1435,7 +1478,9 @@ In reality, many organisations might already have given thought to their situati
 
 In a standard OiRA tool, the user can only plan for measures that are still required. But it might be desirable to also document the measures that have already been implemented, for example in a report that documents the overall state of the risk assessment and prevention.
 
-Therefore, an OiRA tool can be switched from the ”Classic” (i.e. standard) variant to a type that enables the user to define measures that have already been implemented. See the :ref:`chapter about editing an OiRA tool <enable-measures-in-place>` on how to switch the type of tool.
+Therefore, an OiRA tool can be switched from the ”Classic” (i.e. standard) variant to a type that enables the user to define measures that have already been implemented. It is up to the national partners to decide which kind of tool (the standard one or the one including measures already in place) is the best option. If you are working on a sectoral tool, liaise with the national OiRA partner.
+
+See the :ref:`chapter about editing an OiRA tool <enable-measures-in-place>` on how to switch the type of tool.
 
 .. figure:: images/editor/cms-measures-in-place.png
     :align: center
@@ -1450,7 +1495,7 @@ This will have the following effect in the OiRA application for the end-user:
 * On each risk in the identification phase, an additional instruction will be displayed after the risk statement: “Select or add any measures that are already in place”.
 * All measures that were :ref:`defined by the tool creator for this risk <measures-risk-level>` are shown as selectable items to the user.
 * Apart from selecting (= confirming) the appropriate items, the user can also add additional measures that have been implemented in their organisation to tackle this risk.
-* The actual identification is pre-fixed with a **question**: “Are the measures that are selected above sufficient?”, to make it clear that the assessment of the risk needs to consider the concrete situation in the user's organisation. The Yes / No answer does not relate to the risk statement.
+* The actual identification is pre-fixed with a **question**: “Are the measures that are selected above sufficient?”, to make it clear that the assessment of the risk needs to consider the concrete situation in the user's organisation. The Yes / No answer does not relate to the risk statement - unlike in the standard version of an OiRA tool.
 * The **answers** below have the same effect as in a classic OiRA tool: “Yes (the remaining risk is acceptable)” means that the risk is under control and will not appear in the Action Plan. “No (more measures are required)” means that the risk will be added to the Action Plan so that further measures can be planned.
 
 .. figure:: images/editor/cms-measures-in-place-custom.png
@@ -1469,6 +1514,8 @@ In the Action Plan, all measures that have already been implemented are shown fo
     :alt: OiRA client: the action plan page for a risk showing two measures that are already in place above the form to add new measures.
 
     *OiRA client: the action plan page for a risk showing two measures that are already in place above the form to add new measures.*
+
+.. _reworking-oira-tool:
 
 ================================
 Re-working a published OiRA tool
@@ -1493,35 +1540,41 @@ In similar fashion, you can update *already existing* modules, sub-modules, risk
 This kind of change is also not critical.
 *Exception*: the change in wording changes the meaning of a risk statement or similar in such a way that a previous risk assessment is no longer valid.
 
-For these kind of changes, it is safe to do the changes in place, so that the URL of the OiRA tool will stay the same. More details below under “Option 1”.
+For such non-critical changes, it is safe to do the changes in place, so that the URL of the OiRA tool will stay the same. More details below under “Option 1”.
 
 
 --------------------------------------
 Changes that require special attention
 --------------------------------------
 
-Any change to the structure of an OiRA tool is potentially dangerous with regards to the answers of existing users. Examples:
+Any change to the structure of an OiRA tool is potentially dangerous with regards to the answers of existing users and will have to be done in a different way. Examples:
 
 * A risk gets moved from one (sub-) module to another.
 * A module gets moved into a profile question (or the other way around).
 * Two modules get combined into one, or one module gets split into 2 modules.
 
-In all these case, the affected risks / modules receive a new “parent” in the tool. For existing risk assessments, the software will then not know any more that the answers from the user (the Yes/No + the measures) belong to a risk that has a different parent. That means, the answers will be lost.
+In all these case, the affected risks / submodules receive a new “parent” in the tool. For existing risk assessments, the software will then not know any more that the answers from the user (the Yes/No + the measures) belong to a risk that has a different parent. That means, the answers will be lost.
 
 Therefore, for changes that affect the structure of an OiRA tool, the recommendation is to **create a new tool that has a different URL than the old version**. This will allow existing users to keep accessing their risk assessment (including the report) under the old URL, while all new users will be sent to the new URL of the tool. More details under “Option 2”.
 
 The potential drawback is that all users who want to benefit from the new version of the OiRA tool need to perform the risk assessment from scratch. This is not relevant for new users, but existing users will have to answer all questions again, in case they want to use the new version. It is not possible to copy over previously given answers or measures.
 
+**Conclusion**: Think carefully about changes on your tools since these might cause extra work for the end users.
 
------------------------------------
-Option 1: Replacing a tool in place
------------------------------------
+
+-----------------------------------------------
+Option 1: Reworking / improving a tool in place
+-----------------------------------------------
 
 The simplest form of making changes in place is to edit the risks / modules in the CMS and then re-publishing the tool when you are finished. This is especially relevant for minor changes like fixing typos, adjusting links, etc.
 
 For larger changes (but ones that do not affect the structure), you might want to keep the current version in the CMS and apply your changes in a new version (of the same OiRA tool). This can have the benefit that you can already work on the changes for the new version. But it will allow you to still make adjustments to the current version (e.g. fixing typos) without having to make all changes live. Once you publish the new verion, the existing tool in the client will be replaced by the new version (**under the same URL**).
 
 See the :ref:`chapter on OiRA tool versions <oira-tool-versions>` on how to create a new version.
+
+.. note::
+
+  Changes done on an existing OiRA tool will only become visible to the end user when you publish the tool again. See :ref:`publish-oira-tool`.
 
 -------------------------------------------------------
 Option 2: Creating a new version in a separate location
@@ -1542,7 +1595,7 @@ These are especially relevant for option 2.
 Prevent new users from using the old tool
 -----------------------------------------
 
-Any user who has an existing risk assessment from of the old version will still see it when they log in to OiRA on the list of available sessions.
+Any user who has an existing risk assessment from the old version will still see it when they log in to OiRA on the list of available sessions.
 
 But you want to prevent new users from starting a new session of the old version. Therefore, the old version of the tool needs to be marked as “obsolete”. This will prevent it from being displayed in the list of available tools in the OiRA client (under “Start a new session”).
 
