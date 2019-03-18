@@ -42,7 +42,7 @@ There are two types of Login Accounts in OiRA:
     * A sectoral account: for countries/organisations for which the country
       manager does not apply, EU-OSHA will create a sectoral account
 
-In both cases, EU-OSHA needs to create the account first, if it is not already present because it is used for other OSHA sites such as the OiRA community site or the OSHWiki. Once your account has been created you will receive an email, at the provided address, containing the login information. Please note: Both your user name and password are case sensitive!
+In both cases, EU-OSHA needs to create the account first, if it is not already present, because it is used for other OSHA sites such as the OiRA community site or the OSHWiki. Once your account has been created, you will receive an email at the provided address, containing the login information. Please note: Both your user name and password are case sensitive!
 
 Country managers can create sectors by clicking the tab “User management” and then *Add new sector*.
 
@@ -53,10 +53,10 @@ When creating a new sector, be aware that the name of the sector will show up in
     :height: 250 px
     :alt: A country manager can create sector.
 
-    *A country manager can create sector*
+    *A country manager can create a sector via the “Add new sector” button. Existing sectors are listed below.*
 
 
-In order to promote a user to a sector manager, the country manager needs to enter this sector, and then use the “LDAP“ tab. There, the country manager can search for the target user and use the *Grant roles* button.
+In order to promote a user to a sector manager, the country manager needs to enter this sector, and then use the “Manage country access“ tab. There, the country manager can search for the target user and use the *Grant roles* button. On the “Sector management” tab, there is also a shortcut (button) for “Manage country access“ for every sector.
 For any current user who has the Sector Manager role, the *Revoke roles* button can be used to remove this role again.
 
 
@@ -67,7 +67,7 @@ For any current user who has the Sector Manager role, the *Revoke roles* button 
 
     *A country manager can grant and revoke the Sector Manager role*
 
-In similar fashion, any user can be made a Country Manager via the “LDAP” tab on a country. This action can only be performed by an OiRA administrator.
+In similar fashion, any user can be made a Country Manager via the “Manage country access” tab on a country. This action can only be performed by an OiRA administrator.
 
 .. figure:: images/editor/editor_assign_country.png
     :align: center
