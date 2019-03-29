@@ -50,7 +50,7 @@ When creating a new sector, be aware that the name of the sector will show up in
 
 .. figure:: images/editor/editor_add_sector.png
     :align: center
-    :height: 250 px
+    :height: 300 px
     :alt: A country manager can create sector.
 
     *A country manager can create a sector via the “Add new sector” button. Existing sectors are listed below.*
@@ -166,6 +166,7 @@ You will then be brought to the form below:
 
 .. figure:: images/editor/editor_5_addsurvey.png
     :align: center
+    :height: 350px
     :alt: The “new OiRA tool” form
 
     *The “new OiRA tool” form*
@@ -1150,7 +1151,7 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
                 .. figure:: images/editor/editor_risk_always_present.png
                     :align: center
-                    :height: 250px
+                    :height: 200px
                     :alt: An info-bubble informs about the consequences of selecting this option.
 
                     *An info-bubble informs about the consequences of selecting this option.*
