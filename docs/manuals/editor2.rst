@@ -23,7 +23,7 @@ Preferred web browsers to access OiRA (both admin and client) are:
 * Safari version 12 or later
 * Mozilla Firefox version 60 or later
 * Microsoft Edge
-* Microsoft Internet Explorer 11
+* Microsoft Internet Explorer 11 (Deteriorated user experience is to be expected)
 
     .. note::
 
@@ -1186,14 +1186,13 @@ differ in case you have chosen the 2-criteria evaluation when creating the tool)
 
 
     You will have to upload these images yourself. Make sure that the
-    images are clear and legible, not too large
-    in surface size (maximum 300 x 300 pixels on the screen) and file size
-    (maximum 100 kB). Give the image a clear file name, without spaces (for
-    example: Danger_logo.jpg). When the image is ready to upload, select
+    images are clear and legible, and use a high resolution, so that the image will be displayed well in all devices. A size of 1500 by 1200 pixels is the recommended minimum. If an image is larger than required, it will be scaled down automatically - you do not need to take care of this yourself.
+
+    When you have found a suitable image, select
     it from your computer by using the *Choose file* button. The location and file
     name will appear in the field.
 
-    This function will only allow you to upload images with a 'gif', 'jpeg' or 'png'
+    This function will only allow you to upload images with a “gif”, “jpeg/jpg” or “png”
     extension. Any other files will first have to be placed onto a website and
     can be linked to from the text.
 
@@ -1607,13 +1606,25 @@ But you want to prevent new users from starting a new session of the old version
 
     *List of available tools shown to the user*
 
-To achieve this, edit the OiRA tool in the CMS and tick the check-box “Obsolete OiRA tool”. The OiRA tool then needs to be published again for this change to become active.
+To achieve this, edit the OiRA tool (not an OiRA tool version!) in the CMS and tick the check-box “Obsolete OiRA tool”. The OiRA tool version then needs to be published again for this change to become active.
 
 .. figure:: images/editor/editor_obsolete_tool.png
     :align: center
+    :height: 300px
     :alt: Marking an OiRA tool as obsolete
 
     *Marking an OiRA tool as obsolete*
+
+
+The following screenshot emphasizes the difference between an OiRA tool and an OiRA tool version.
+
+.. figure:: images/editor/tools-vs-versions.png
+    :align: center
+    :height: 300px
+    :alt: Marking an OiRA tool as obsolete
+
+    *Three OiRA tools, marked in red, each with one or more versions*
+
 
 
 Inform existing users that a new version available
