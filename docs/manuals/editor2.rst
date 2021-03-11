@@ -23,11 +23,14 @@ Preferred web browsers to access OiRA (both admin and client) are:
 * Safari version 12 or later
 * Mozilla Firefox version 60 or later
 * Microsoft Edge
-* Microsoft Internet Explorer 11 (Deteriorated user experience is to be expected)
+
+Using OiRA in the following browsers is possible, but deteriorated user experience is to be expected. Support for those browsers is no longer actively ensured by the software developers.
+
+* Microsoft Internet Explorer 11
 
     .. note::
 
-      All versions of Internet Explorer lower than 11 are not supported!
+      Any version of Internet Explorer lower than 11 will give serious usage problems.
 
 
 -----------------------
