@@ -145,9 +145,9 @@ screen where you will see the notification 'You have been logged out'.
 Managing a Country
 ==================
 
-Countries cannot be created as they have been setup by the OiRA Administrators for you. But some of a country's settings will affect the behaviour of the OiRA tools created for it.
+Countries cannot be created as they have been set up by the OiRA Administrators for you. But some of a country's settings will affect the behaviour of the OiRA tools created for it.
 
-As a **country manager** you are allowed to change the settings of your country.
+As a **country manager** you can change the settings for your country.
 
 .. figure:: images/editor/country_list.png
     :align: center
@@ -178,11 +178,11 @@ Text fields and metadata
 ------------------------
 
 * **Title**:
-    The title of the country will be shown in the Sector overview below the country's flag. 
-    Please do not change this title without any important reason. 
+    The title of the country will be shown in the Sector overview below the country's flag.
+    Please do not change this title without any important reason.
 
 * **Open sections on risk page**:
-    Here you can choose, which information sections should be open by default on a risk identification page:
+    Here you can choose which information sections should be open by default on a risk identification page:
 
     - Information
     - Resources
@@ -191,23 +191,23 @@ Text fields and metadata
     Sections not checked will be shown intially in collapsed mode, but the user can always open those sections with a click.
 
 * **Available reports**:
-    Choose here, which reports are offered to the user on the Report page. 
+    Choose here, which reports are offered to the user on the Report page.
     There are 4 different types of reports available:
 
-    - Full report (Word document):     
-        Word / Office Open XML (.docx) that can be edited after download. It provides all information and input entered throughout the risk assessment process. 
+    - Full report (Word document):
+        Word / Office Open XML (.docx) that can be edited after download. It provides all information and input entered throughout the risk assessment process.
         This report is helpful for your users to provide evidence of the risk assessment for supervisory authorities (e.g. the labour inspectorate).
-    
-    - Action plan (Excel spreadsheet): 
-        Excel / Office Open XML (.xlsx) that can be edited after download. It provides all information on all the measures you have chosen to implement. 
+
+    - Action plan (Excel spreadsheet):
+        Excel / Office Open XML (.xlsx) that can be edited after download. It provides all information on all the measures you have chosen to implement.
         This report is useful for your users to actively follow up on the implementation of measures that they have chosen and to manage the problems/risks in their workplaces (specific tasks, expertise, responsibilities, deadlines).
 
-    - Overview of risks (PDF): 
-        PDF formatted report that cannot be edited after downloading it. It provides an overview of the risks identified. 
+    - Overview of risks (PDF):
+        PDF formatted report that cannot be edited after downloading it. It provides an overview of the risks identified.
         This report is useful for your users to get a quick overview of the status of risks in their workplaces, pass information to the people concerned and monitor whether risks/measures are properly dealt with.
-    
-    - Overview of measures (PDF): 
-        PDF formatted report that cannot be edited after downloading it. It provides a quick overview of the measures to be implemented. 
+
+    - Overview of measures (PDF):
+        PDF formatted report that cannot be edited after downloading it. It provides a quick overview of the measures to be implemented.
         This report is useful for your users to get a quick overview of the status of measures they have decided to implement, pass information to the people concerned and monitor whether risks/measures are properly dealt with.
 
 
@@ -215,8 +215,8 @@ Text fields and metadata
     If this option is checked, your users will be able to obtain an official certificate of completion once they reach the threshold defined below.
 
 * **Certificate initial threshold (in percent)**
-    If "Enable certificates" is checked, add a number here. After a session completion rate is greater than this limit, the user will be informed about the possibility to earn a certificate. 
-    
+    If "Enable certificates" is checked, add a number here. After a session completion rate is greater than this limit, the user will be informed about the possibility to earn a certificate.
+
     E.g. if you put a 15 here, after 15% of the risk assessment has been filled in, the user will be shown an informational text on the status page. The text informs the user about earning a cerificate.
 
 .. figure:: images/editor/cert_initial_treshold.png
@@ -224,16 +224,20 @@ Text fields and metadata
     :height: 350px
     :alt: Status: initial treshold reached
 
+    *Status: initial treshold reached*
+
 
 * **Certificate completion threshold (in percent)**
     Add a number for the certificate's completion limit (in percent) here. After a session completion rate is greater than this limit the user will earn a certificate.
-    
+
     E.g. if you put a 50 here, after 50% of the risk assessment has been fulfilled, the user will be shown another informational text on the status page. This text informs the user that he now earned the certificate. From now on a button is offert to view and print the certificate.
 
 .. figure:: images/editor/cert_complete_treshold.png
     :align: center
     :height: 350px
-    :alt: Status: completion treshold reached 
+    :alt: Status: completion treshold reached
+
+    *Status: completion treshold reached*
 
 * **Explanatory sentence**
     The text entered here is shown to the user after reaching the initial threshold. You can use this to point to an external website that provides more information.
@@ -401,9 +405,9 @@ Fields that allow special behaviour
     For more details on this alternative tool type, see the chapter :ref:`OiRA tool with measures already in place <measures-in-place>`.
 
 * **Handling of measures text (if measures-in-place are used)**
-    This setting defines how the “Measures in place” options are displayed to the user. 
+    This setting defines how the “Measures in place” options are displayed to the user.
 
-    * Choose **Simple** if the texts for Description and General Approach are identical in your measures. 
+    * Choose **Simple** if the texts for Description and General Approach are identical in your measures.
 
     * Choose **Full** if the texts in General Approach provide more details than the Description.
 
@@ -438,11 +442,7 @@ Fields that allow special behaviour
     * **Tool notification message**
         Enter the text that should be shown. You can use the usual formatting in the message, e.g. paragraphs, lists and bold text. You can also include links, so that you can provide a link to a new version of the tool or similar.
 
-    If the custom notification was activated, the end-user will see it in form of a pop-up when they open the tool in the client.
-
-    .. note::
-
-        The custom notification will only show up to end users once a day (the first time every day they login to the tool).
+    If the custom notification was activated, the end-user will see it in the “Preparation” screen of their risk assessment. It will be shown both on new and on already existing risks assessments made with this OiRA tool.
 
     .. figure:: images/editor/custom_message_client.png
       :align: center
@@ -454,13 +454,8 @@ Fields that allow special behaviour
 .. _custom-tool-logo:
 
 * **Include a logo which links to an external website**: (Optional)
-    Your sector might already have chosen a logo that will appear in the bottom
-    left corner of the OiRA risk assessment application. This is explained in :ref:`custom-sector-logo`.
 
-    That logo can be clicked and links to the homepage of the OiRA risk
-    assessment site (https://oiraproject.eu/oira-tools/eu).
-
-    There is another option to include a logo which links
+    It is possible to include a logo in your OiRA tool which links
     back to a selected web page. This logo will appear on the first page of the specific tool that
     end-users visit as soon as they start with a risk assessment (the Preparation step).
 
@@ -470,9 +465,9 @@ Fields that allow special behaviour
 
     .. figure:: images/editor/editor_client_example_logos.png
       :align: center
-      :alt: An example of the end-user facing OiRA site, showing the two different logos.
+      :alt: An example of the end-user facing OiRA site, showing the custom logo
 
-      *An example of end-user facing OiRA risk assessment site (OiRA client), showing the two different logos. Logo "1" is the logo pointing to the external organisation that we just entered. Logo "2" is the sector's logo.*
+      *An example of end-user facing OiRA risk assessment site (OiRA client), showing the logo, caption and link on the “Learn more about this tool…” screen*
 
     * **External site URL**
         This is the URL (website address) of the external website you would like the logo to link to.
@@ -1459,40 +1454,6 @@ Once finished, click *Save changes* at the bottom of the page.
 **Important**: If your OiRA tool allows the user to define measures that are already implemented, then all the measures that you define here will be available for selection already in the Identification phase. See the respective :ref:`chapter on this kind of OiRA tool <measures-in-place>`.
 
 
-.. _custom-sector-logo:
-
-====================================================
-Customizing OiRA to reflect your organisation's logo
-====================================================
-
-You may customize the way the OiRA risk assessment tool will appear to end-users to let it reflect your organisation's logo.
-
-.. figure:: images/editor/editor_edit_sector_link.png
-    :align: center
-    :height: 350px
-    :alt: The “Edit” link on a sector
-
-    *The “Edit” link on a sector*
-
-You will then see a form similar to the one shown in the image below.
-
-.. figure:: images/editor/editor_16_selecting_colours.png
-    :align: center
-    :height: 550px
-    :alt: The “Settings” form for a sector
-
-    *The “Settings” form for a sector (with a custom logo already present)*
-
-Without customisation, the standard OiRA logo is displayed on the sidebar of the client. But you may also upload your sector's own logo.
-
-Under *Logo* you check the box *My own*, then click on *Choose file* to navigate on your computer for selecting the image to upload. Finally, click on *Save* at the bottom of the page. You can change the image at a later date if needed, or switch back to the standard logo.
-
-For best results, take a transparent 'PNG' file with a height of at least 110 pixels. Larger logos will be resized automatically.
-
-Please also see :ref:`the section on a custom tool logo<custom-tool-logo>` for a screen-shot of how this will affect the client.
-
-
-
 =======================
 Checking your OiRA tool
 =======================
@@ -1628,7 +1589,7 @@ This will have the following effect in the OiRA application for the end-user:
 
 If you are using the **Measures in place** type variant for your OiRA tool, you can choose between two versions to display the suggested measures:
 
-* **Full (show Description and General Approach)** 
+* **Full (show Description and General Approach)**
 
 If you have additional descriptive text to each measure besides a single statement, you can choose this option to offer that extra information to your users.
 
@@ -1639,7 +1600,7 @@ In this case, the Description :ref:`defined by the tool creator for this risk <m
     :height: 250px
     :alt: OiRA client: full display of measure in place with tooltip.
 
-    *OiRA client: full display of measure in place with tooltip.* 
+    *OiRA client: full display of measure in place with tooltip.*
 
 After choosing the related measure by ticking it, the General approach text is displayed below the measure's Description.
 
@@ -1648,7 +1609,7 @@ After choosing the related measure by ticking it, the General approach text is d
     :height: 300px
     :alt: OiRA client: full display of measure in place when selected by the user.
 
-    *OiRA client: full display of measure in place when selected by the user.* 
+    *OiRA client: full display of measure in place when selected by the user.*
 
 
 * **Simple (show only General Approach)**
@@ -1663,25 +1624,25 @@ With this setting, there will be no tooltip shown but only the Description next 
     :height: 270px
     :alt: OiRA client: simple display of measure in place.
 
-    *OiRA client: simple display of measure in place.* 
+    *OiRA client: simple display of measure in place.*
 
-For both settings, the Description is displayed in the list of additional measures. This list is offered to the user if he chooses that more measures are required.
+For both settings, the Description is displayed in the list of additional measures. This list is offered in the “Action Plan” step, that means if the user has answered the risk statement with “No” / “More measures are required” or on priority risks.
 
 .. figure:: images/editor/cms-measures-text-display-1.png
     :align: center
     :height: 310px
     :alt: OiRA client: list of additional measures to add.
 
-    *OiRA client: list of additional measures to add.* 
+    *OiRA client: list of additional measures to add.*
 
-When adding an additional measure, both - Description and General approach are used to explain the measure. 
+When adding an additional measure, both - Description and General approach are used to explain the measure.
 
 .. figure:: images/editor/cms-measures-text-display-2.png
     :align: center
     :height: 320px
     :alt: OiRA client: additional measure added.
 
-    *OiRA client: additional measure added.* 
+    *OiRA client: additional measure added.*
 
 
 In the Action Plan, all measures that have already been implemented are shown for information. Since there is no action required for them, they cannot be edited or scheduled. But new measures (to be implemented in the future) can still be added just as with a classic OiRA tool.
@@ -1695,11 +1656,11 @@ In the Action Plan, all measures that have already been implemented are shown fo
 
 .. _integrated-action-plan:
 
-===================================================
-OiRA tool feature "integrated action plan"
-===================================================
+==========================================
+OiRA tool feature “Integrated action plan”
+==========================================
 
-If the setting "Integrated Action Plan" is set for a tool, the action plan is included in the risk identification and evaluation step. 
+If the setting "Integrated Action Plan" is selected for a tool, the action plan will be included in the risk identification and evaluation step.
 
 For the standard OiRA tool without the integrated action plan, there is a single step "Action plan" following the step "Identification + Evaluation" in the main menu of the tool:
 
@@ -1711,7 +1672,7 @@ For the standard OiRA tool without the integrated action plan, there is a single
   * Status
 
 
-For an OiRA tool with an integrated action plan, these two steps are unified to the step "Assessment":
+For an OiRA tool with an integrated action plan, these three steps are unified to the step "Assessment":
 
   * Preparation
   * Involvement
@@ -1721,7 +1682,7 @@ For an OiRA tool with an integrated action plan, these two steps are unified to 
 
 If the integrated action plan feature is used for a tool, the the elements described under ‘Action plan’ will appear under the identification and evaluation of each risk.
 
-**Important**: the feature "integrated action plan" can be turned on or off for existing tools. Even if data was collected as your users are already working on that tool, the data does not get lost. It is only displayed in a different way regarding the selected option.
+**Important**: the feature "integrated action plan" can be turned on or off for existing tools. All data that users working with this tool have entered will be kept. It is only displayed in a different way regarding the selected option.
 
 .. _reworking-oira-tool:
 
