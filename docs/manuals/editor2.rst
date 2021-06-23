@@ -145,9 +145,9 @@ screen where you will see the notification 'You have been logged out'.
 Managing a Country
 ==================
 
-Countries cannot be created as they have been set up by the OiRA Administrators for you. But some of a country's settings will affect the behaviour of the OiRA tools created for it.
+Countries cannot be created, as they have been set up by the OiRA Administrators for you. But some of a country's settings will affect the behaviour of the OiRA tools created for it. Only a **country manager** can access the following section.
 
-As a **country manager** you can change the settings for your country.
+As a country manager you can change the settings for your country.
 
 .. figure:: images/editor/country_list.png
     :align: center
@@ -181,7 +181,7 @@ Text fields and metadata
     The title of the country will be shown in the Sector overview below the country's flag.
     Please do not change this title without any important reason.
 
-* **Open sections on risk page**:
+* **Expanded sections on risk page**:
     Here you can choose which information sections should be open by default on a risk identification page:
 
     - Information
@@ -192,7 +192,7 @@ Text fields and metadata
 
 * **Available reports**:
     Choose here, which reports are offered to the user on the Report page.
-    There are 4 different types of reports available:
+    There are 4 different types of reports available. By default, the first three are selected.
 
     - Full report (Word document):
         Word / Office Open XML (.docx) that can be edited after download. It provides all information and input entered throughout the risk assessment process.
@@ -213,6 +213,7 @@ Text fields and metadata
 
 * **Enable certificates**:
     If this option is checked, your users will be able to obtain an official certificate of completion once they reach the threshold defined below.
+    Before you enable certificates, please talk to the OiRA team at EU-OSHA, because you will have to define the fields that need to be filled by end-users in the certificate.
 
 * **Certificate initial threshold (in percent)**
     If "Enable certificates" is checked, add a number here. After a session completion rate is greater than this limit, the user will be informed about the possibility to earn a certificate.
@@ -699,6 +700,12 @@ Colours used on the right hand menu:
       :alt: The tools and their versions, with colour coding to indicate their status
 
       *The tools and their versions, with colour coding to indicate their status*
+
+--------------------------------
+Marking an OiRA tool as obsolete
+--------------------------------
+
+See the section about :ref:`communicating tool changes <make-tool-obsolete>` to learn how to mark an OiRA tool as obsolete and about the consequences this has.
 
 
 ======================================
@@ -1682,6 +1689,8 @@ For an OiRA tool with an integrated action plan, these three steps are unified t
 
 If the integrated action plan feature is used for a tool, the the elements described under ‘Action plan’ will appear under the identification and evaluation of each risk.
 
+**User testing** conducted at the end of 2020 has shown a slight preference for having the Action Plan step integrated into the general identification and evaluation process.
+
 **Important**: the feature "integrated action plan" can be turned on or off for existing tools. All data that users working with this tool have entered will be kept. It is only displayed in a different way regarding the selected option.
 
 .. _reworking-oira-tool:
@@ -1763,6 +1772,8 @@ Communication aspects
 
 These are especially relevant for option 2.
 
+.. _make-tool-obsolete:
+
 Prevent new users from using the old tool
 -----------------------------------------
 
@@ -1777,7 +1788,7 @@ But you want to prevent new users from starting a new session of the old version
 
     *List of available tools shown to the user*
 
-To achieve this, edit the OiRA tool (not an OiRA tool version!) in the CMS and tick the check-box “Obsolete OiRA tool”. The OiRA tool version then needs to be published again for this change to become active.
+To **mark an OiRA tool as obsolete**, edit the OiRA tool (not an OiRA tool version!) in the CMS and tick the check-box “Obsolete OiRA tool”. The OiRA tool version then needs to be published again for this change to become active.
 
 .. figure:: images/editor/editor_obsolete_tool.png
     :align: center
