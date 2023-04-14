@@ -5,77 +5,87 @@ The *Online interactive Risk Assessment tool (OiRA)* is an adaptation of
 `Euphorie`_, which is an add-on product for the `Plone`_ content management
 system.
 
-The requirements for running an OiRA site are:
+Minimum recommended system requirements for running an OiRA site are::
 
-* Plone 4.2.
-* an SQL database
-* two separate virtual hosts
+* Ubuntu 18.04 LTS or 22.04 LTS
+* Python 3.8
+* Postgresql 10+
+* Git
+* Nginx
 
-Plone instalation
------------------
-To install OiRA you will first need to `download`_ and install Plone.
-OiRA requires Plone 4.2.  After installing Plone you can install
-OiRA. To do this you will need to edit the ``base.cfg`` file (part of the
-`buildout <http://www.buildout.org>`_ configuration) of your
-Plone installation. This file is normally located in the ``zinstance``
-directory if your Plone install.  
+Install Python 3.8 on Ubuntu 18.04
+----------------------------------
 
-Look for the *find-links* parameter under the ``buildout`` section
-and add the syslab.com egg server::
+Python 3.8 isn't available by default on Ubuntu 18.04 but it can be installed from a ppa::
+
+  $ sudo apt update
+  $ sudo apt install software-properties-common
+  $ sudo add-apt-repository ppa:deadsnakes/ppa
+  $ sudo apt install python3.8
+  $ sudo apt install python3.8-dev
+  $ sudo apt install python3.8-venv
+
+
+Install other system requirements
+---------------------------------
+::
+
+  $ sudo apt install build-essential
+  $ sudo apt install postgresql
+  $ sudo apt install git
+
+Instalation of OiRA software with buildout
+------------------------------------------
+
+OiRA uses zc.buildout for installation and configuration.
+First clone the git repo::
+
+  $ git clone git@github.com:EU-OSHA/oira.application.buildout.git
+  $ cd oira.application.buildout
+
+Add a buildout.cfg file to configure the software as you require, for example::
 
   [buildout]
-  find-links =
-    ...
-	http://products.syslab.com/products/simple
+  extends =
+      production_zeo.cfg
 
+  [settings]
+  postgres-url = postgresql://username:password@localhost/database
+  # configure the postgresql server details above, as appropriate
 
-Look for an *eggs* line under the ``instance`` section and add OiRA there::
+  [supervisor]
+  programs =
+      10 zeo ${zeo:location}/bin/runzeo ${zeo:location}
+      100 zope ${buildout:directory}/bin/instance [console] ${instance:location} true
 
-  [instance]
-  ...
-  eggs =
-      osha.oira
-      psycopg2 # for using postgresql as your database backend
+Create a python virtual environment with python3.8::
 
+  $ python3.8 -m venv py3
 
-This will instruct Plone to install the OiRA software. Next you will
-need to add some *zcml* entries to load the necessary configuration as well::
+Now, you can run `make` to complete the installation of the OiRA software.
 
-  [instance]
-  ...
-  zcml =
-      osha.oira
-      osha.oira-overrides
-      euphorie.deployment-meta
-      euphorie.deployment
-      euphorie.deployment-overrides
+Start the Services
+------------------
 
-After making these two changes you must (re)run buildout and restart your
-Zope/Plone instance. Navigate to your ``zinstance`` directory and type::
+Supervisor is used to manage the services::
 
-    $ bin/buildout
-    $ bin/instance restart
+  $ ./bin/supervisord
 
-A new *Euphorie website* option should now appear in the list of add-on products
-in your Plone control panel. Installing this will setup Euphorie in your site.
+Check the current status of the services::
 
-For more information on installing add-on products in your Plone site please
-see the article `installing an add-on product`_ in the Plone knowledge base.
-
+  $ ./bin/supervisorctl status
+  zeo                              RUNNING   pid 14377, uptime 0:00:07
+  zope                             RUNNING   pid 14378, uptime 0:00:07
 
 Configuration
 -------------
 
-Euphorie uses `z3c.appconfig <http://pypi.python.org/pypi/z3c.appconfig>`_ to
-handle application configuration. All values are stored in the ``euphorie``
-section. For example::
+Some options can be configured via a euphorie.ini section, the most important one is the client URL::
 
-  [euphorie]
+  [euphorie.ini]
   client=http://oira.example.com
 
-The available options are:
-
-. table:: configuration options
+  Options::
 
    +--------------------------+-------------------------------------------+
    | options                  | Description                               |
@@ -83,38 +93,21 @@ The available options are:
    | ``client``               | URL for the client (see also              |
    |                          | :ref:`Virtual hosting <virtualhosting>`)  |
    +--------------------------+-------------------------------------------+
-   | ``terms-and-conditions`` | Boolean flag indicating it the client     |
-   |                          | must ask users to accept the terms        |
-   |                          | and conditions of the site.               |
-   +--------------------------+-------------------------------------------+
+  
 
 SQL database
 ------------
 
 Euphorie uses a SQL database to store information for users of the client. Any
 SQL database supported by SQLALchemy_ should work. If you have selected a
-database you will need to configure it in ``buildout.cfg``. For example if
-you use postgres you will first need to make sure that the psycopg_ driver
-is installed by adding it to the ``eggs`` of the ``instance`` section::
+database you will need to configure it in ``buildout.cfg``. 
+Postgresql is supported by default, so the python psycopg_ driver is already installed.
 
-  [instance]
-  ...
-  eggs =
-      osha.oira 
-      psycopg2
+Next you need to configure the database connection information. 
+This is done via the settings section of the buildout.cfg file, as already mentioned above::
 
-next you need to configure the database connection information. This requires
-a somewhat verbose statement in the ``instance`` section of ``buildout.cfg``::
-
-  [instance]
-  ...
-  zcml-additional =
-     <configure xmlns="http://namespaces.zope.org/zope"
-                xmlns:db="http://namespaces.zope.org/db">
-         <include package="z3c.saconfig" file="meta.zcml" />
-         <db:engine name="session" url="postgres:///euphorie" />
-         <db:session engine="session" />
-     </configure>
+  [settings]
+  postgres-url = postgresql://username:password@localhost/database
 
 Make sure The ``url`` parameter is correct for the database you want to use.
 It uses the standard SQLAlchemy connection URI format.
@@ -122,15 +115,9 @@ It uses the standard SQLAlchemy connection URI format.
 To setup the database you must run buildout and run the database initialisation
 command::
 
-    $ bin/buildout
-    $ bin/instance initdb
-
-.. note::
-
-   You need Zope 2.12.12 or later to be able to use the ``initdb`` command. For
-   earlier Zope versions you need to specify the path for the
-   :py:mod:`euphorie.deployment.commands.xmlimport` module on the command line.
-
+    $ ./py3/bin/buildout
+    $ bin/instance initdb  
+  
 
 .. _virtualhosting:
 
@@ -140,40 +127,39 @@ Virtual hosting
 Euphorie requires two separate virtual hosts: one host for the client, and one
 for CMS tasks. It is common to use ``oira.example.com`` as hostname for the
 client and ``admin.oira.example.com`` as hostname for the CMS. The standard
-method for configuring virtual hosting for Plone sites apply here as well. The
-Plone website has instructions for `configuring Plone with Apache`_ and
-`configuring Plone with Enfold Proxy on Windows`_. Here is an example Apache
-configuration::
+method for configuring virtual hosting for Plone sites applies here as well. 
+The Plone website has instructions for `configuring Plone with Nginx`_.
+Here is an example Nginx configuration::
 
-  <VirtualHost *:80>
-      ServerName admin.oira.example.com
-      ProxyPass / http://localhost:8080/VirtualHostBase/http/admin.oira.example.com:80/Plone/VirtualHostRoot/
+  server {
+    listen 443 ssl http2;
+    server_name oira.example.com;
 
-      # Prevent access to the client using the administrative site.
-      <Location /client>
-          order allow, deny
-          deny form all
-      </Location>
-  </VirtualHost>
+    ssl_certificate /etc/letsencrypt/live/oira.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/oira.example.com/privkey.pem;
 
-  <VirtualHost *:80>
-      ServerName oira.example.com
-      ProxyPass / http://localhost:8080/VirtualHostBase/http/admin.oira.example.com:80/Plone/client/VirtualHostRoot/
-  </VirtualHost>
+    location ~ ^(.*)$ {
+        rewrite ^(.*)$ /VirtualHostBase/$scheme/oira.example.com:$server_port/Plone/VirtualHostRoot$1;
+        proxy_pass http://127.0.0.1:8080;
+        break;
+    }
+  }
+  server {
+    listen 443 ssl http2;
+    server_name admin.oira.example.com;
 
+    ssl_certificate /etc/letsencrypt/live/admin.oira.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/admin.oira.example.com/privkey.pem;
 
-You will also need to configure the URL for the client in the ``euphorie.ini`` file::
-
-  [euphorie]
-  client=http://oira.example.com
-
-
-.. _Euphorie: pypi.python.org/pypi/Euphorie
-.. _Plone: http://plone.org/
-.. _download: http://plone.org/download
-.. _installing an add-on product: http://plone.org/documentation/kb/third-party-products/installing
-.. _SQLAlchemy: http://sqlalchemy.org/
-.. _psycopg: http://initd.org/psycopg/
-.. _configuring Plone with Apache: http://plone.org/documentation/kb/plone-with-apache
-.. _configuring Plone with Enfold Proxy on Windows: http://plone.org/documentation/kb/managing-your-plone-sites-in-windows-with-enfold-proxy
-
+    location ~ ^(.*)$ {
+        rewrite ^(.*)$ /VirtualHostBase/$scheme/admin.oira.example.com:$server_port/Plone/VirtualHostRoot$1;
+        proxy_pass http://127.0.0.1:8080;
+        break;
+    }
+  }
+  
+.. _Euphorie: https://pypi.python.org/pypi/Euphorie
+.. _Plone: https://plone.org/
+.. _SQLAlchemy: https://sqlalchemy.org/
+.. _psycopg: https://www.psycopg.org/
+.. _configuring Plone with Nginx: https://docs.plone.org/manage/deploying/front-end/nginx.html
