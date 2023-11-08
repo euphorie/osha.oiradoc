@@ -1,5 +1,5 @@
-Installation
-============
+Installation Guide
+==================
 
 The *Online interactive Risk Assessment tool (OiRA)* is an adaptation of 
 `Euphorie`_, which is an add-on product for the `Plone`_ content management

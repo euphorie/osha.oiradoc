@@ -30,10 +30,11 @@ Manuals
 .. toctree::
    :maxdepth: 1
 
+   Welcome <self>
    manuals/install
-   manuals/creation-guide
-   manuals/editor2
-   manuals/admin
+   Creation Guide <manuals/creation-guide>
+   Editors Manual <manuals/editor2>
+   Admin Manual <manuals/admin>
 
 .. THIS IS A COMMENT; DO NOT TRANSLATE
    To make the hoster happy, we list all files that we need, but don't want in any toctree below.

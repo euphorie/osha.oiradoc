@@ -1,5 +1,5 @@
-Admin manual (under development)
-================================
+Admin manual
+============
 
 This document explains how you can administer users and countries so that these users can start creating online OiRA tools. 
 

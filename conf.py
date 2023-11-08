@@ -39,15 +39,15 @@ master_doc = 'index'
 
 # General substitutions.
 project = 'OiRA'
-copyright = '2009-2010, Simplon, Syslab.com, European Agency for Safety and Health at Work'
+copyright = '2009-2024, Simplon, Syslab.com, European Agency for Safety and Health at Work'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '2.0'
+version = '15'
 # The full version, including alpha/beta/rc tags.
-release = '2.0'
+release = '15.1.0'
 
 # There are two options for replacing |today|: either, you set today to
 # some non-false value, then it is used:
